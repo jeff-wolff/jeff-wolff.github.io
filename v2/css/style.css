@@ -13,7 +13,7 @@ blockquote, q { quotes: "" ""; }
 @font-face { font-family: 'Din'; src: url('../fonts/DIN.eot'); /* here you go, IE */
 src: local('DINPro Bold'), local('DINPro-Bold'), url('../fonts/DIN.ttf') format('truetype'); }
 html { margin-top: 30px; position: relative; }
-html:after { position: absolute; width: 100%; height: 30px; top: -30px; left: 0; background: #eee; display: block; color: #888; line-height: 30px; text-align: center;  content: "You are viewing an older version of jeffwolff.net";}
+html:after { position: absolute; width: 100%; height: 30px; top: -30px; left: 0; background: #f6f6f6; display: block; color: #888; line-height: 30px; text-align: center;  content: "You are viewing an older version of jeffwolff.net";}
 body { background: #e3e3e3; font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 18px; color: #999; }
 /* `Structure
 ---------------------------------------------------------------------------------------------------- */
