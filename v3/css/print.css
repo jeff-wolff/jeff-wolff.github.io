@@ -1,0 +1,33 @@
+body {
+	font-size: 12px;
+	line-height: 18px;
+}
+@page {
+margin: 0.25cm;
+}
+header,footer {
+	display: none;
+}
+#subheading h1,#subheading.resume h4 a,p {
+	color: #000;
+	margin: 0;
+}
+h1 {
+	font-size: 48px;
+	line-height: 60px;
+}
+h3 {
+	font-size: 24px;
+	line-height: 30px;
+}
+#subheading.resume {
+	border: none;
+	height: auto;
+}
+#content {
+	padding: 0;
+}
+#content section {
+	margin: 0;
+	padding: 0;
+}

@@ -1,0 +1,139 @@
+body { background: #fff; font: 16px normal Georgia, "Times New Roman", Times, serif; color: #3b3b3b; }
+
+a:link { color: #aaa; text-decoration: none; }
+
+a:visited { color: #aaa; text-decoration: none; }
+
+a:hover { color: #010101; text-decoration: underline; }
+
+a:active { color: #010101; text-decoration: underline; }
+
+#bigcartel { background: #222 url(bc-bg.gif) repeat-x; padding: 5px 0 5px 0; height: auto; _height: 20px; position: relative; top: 0; text-align: center; text-shadow: #000 1px 1px; color: #fff; font-size: 12px; font-family: Verdana; line-height: 1.7em; }
+
+#bigcartel-content { display: none; height: 210px; width: 600px; margin: 0 auto; padding: 10px 0 10px 0; }
+
+#bigcartel-content h1 { background: url(bc-title.png) no-repeat; width: 297px; height: 38px; text-indent: -9999px; margin: 0 auto; }
+
+a.contactus { color: #f1f1f1; padding: 2px 145px;  border: 1px solid #aaa; text-shadow: none; font-weight: bold;  font-size: 16px;  }
+a:hover.contactus { text-decoration: none; background: #aaa; color: #333; }
+p.ten { margin-top: 5px; }
+
+p#switch { cursor: pointer; }
+
+#container { width: 1000px; margin: 0 auto; }
+
+#header { width: 940px; margin: 0 40px 0 40px; }
+
+#logo { width: 140px; height: 91px; position: relative; float: left; border-bottom: 1px solid #e1e1e1; margin: 0 10px 0 0; }
+
+#logo h1 { background: url(xhila-logo.png) no-repeat; width: 61px; height: 22px; position: absolute; bottom: 7px; left: 7px; text-indent: -9999px; }
+
+#logo h1.portfolio { background: url(xhila-portfolio.png) no-repeat; }
+
+#logo h1.blog { background: url(xhila-blog.png) no-repeat; }
+
+#logo h1.contact { background: url(xhila-contact.png) no-repeat; }
+
+#caption { width: 780px; height: 91px; position: relative; float: left; border-bottom: 1px solid #e1e1e1; margin: 0 0 0 10px; }
+
+#caption span { width: auto; position: absolute; bottom: 10px; font-size: .85em; color: #666666; }
+
+#subhead { background: url(spec-border.gif) repeat-x bottom; width: 940px; height: 250px; margin: 0 40px 0 40px; }
+
+#nav  { width: 140px; float: left; margin: 19px 10px 0 0; }
+
+#nav li { margin: 0;  }
+
+#nav li.selected { display: block; color: #fff; background: #fd7400; width: 128px; _width: 130px; padding: 4px 0 4px 12px; }
+
+#nav.portfolio li.selected { display: block; color: #fff; background: #0053fd; width: 128px; _width: 130px; padding: 4px 0 4px 12px; }
+
+#nav.blog li.selected { display: block; color: #fff; background: #00d053; width: 128px; _width: 130px; padding: 4px 0 4px 12px; }
+
+#nav.contact li.selected { display: block; color: #fff; background: #fd1800; width: 128px; _width: 130px; padding: 4px 0 4px 12px; }
+
+#nav a { font-weight: normal; display: block; color: #666; width: 128px; _width: 130px; padding: 4px 0 4px 12px; text-decoration: none; }
+
+#nav a:hover { background: #fd7400; color: #fff; }
+
+#nav.portfolio a:hover { background: #0053fd; }
+
+#nav.blog a:hover { background: #00d053; }
+
+#nav.contact a:hover { background: #fd1800; }
+
+#banner { background: #fd7400; width: 780px; _width: 778px; height: 207px; position: relative; float: left; margin: 19px 0 0 10px; }
+
+#banner.portfolio { background: #0053fd; }
+
+#banner.blog { background: #00d053; }
+
+#banner.blog a:link { color: #00913a; text-decoration: none; }
+
+#banner.blog a:visited { color: #00913a; text-decoration: none; }
+
+#banner.blog a:hover { color: #007d32; text-decoration: underline; }
+
+#banner.contact { background: #fd1800; }
+
+#banner span { width: auto; position: absolute; bottom: 9px; left: 10px; font: 1.875em normal Helvetica, Arial; color: #fff; }
+
+#content { width: 940px; margin: 10px 40px 0 40px; }
+
+#sidebar { width: 140px; float: left; margin: 0 19px 0 0; }
+
+#sidebar li { margin: 0; display: block; color: #fd7400; width: 140px; padding: 4px 0 4px 12px; font-size: 1.25em; text-decoration: none; }
+
+#sidebar.portfolio li { color: #0053fd; }
+
+#sidebar.blog li { color: #00d053; }
+
+#sidebar.contact li { color: #fd1800; }
+
+#sidebar li.goals { margin: 105px 0 0 0; }
+
+#content-box { width: 650px; float: left; padding: 5px; line-height: 25px; }
+
+#content-box p { margin: 0 0 30px 0; }
+
+#content-box p#moretweets a { color: #00913a; text-decoration: none;}
+
+#content-box p#moretweets a:hover { color: #007d32; text-decoration: none;}
+
+#content-box p#moretweets li { margin-bottom: 10px; }
+
+#infobar { width: 115px; float: left; padding: 3px; text-align: center; }
+#infobar ul { margin-top: 5px; }
+#infobar li { text-align: right; }
+
+li.email a { background: url(images/email.png) no-repeat right 1px; padding-right: 20px; vertical-align: middle;}
+li.lastfm a { background: url(images/lastfm.png) no-repeat right 1px; padding-right: 20px; vertical-align: middle;}
+li.linkedin a { background: url(images/linkedin.png) no-repeat right 1px; padding-right: 20px; vertical-align: middle;}
+li.skype a { background: url(images/skype.png) no-repeat right 1px; padding-right: 20px; vertical-align: middle;}
+li.twitter a { background: url(images/twitter.png) no-repeat right 1px; padding-right: 20px; vertical-align: middle;}
+li.vimeo a { background: url(images/vimeo.png) no-repeat right 1px; padding-right: 20px; vertical-align: middle;}
+
+#footer { width: 940px; margin: 0 40px 0 40px; background: #fff; font-size: 0.75em; font-style: italic; text-align: center; padding: 0 0 10px 0;}
+
+.date { background: #f5f5f5; padding: 2px; }
+
+.clear { clear: both;}
+
+#form-wrap { width: 600px; margin: 0 auto; }
+
+label { width: 200px; display: block; }
+
+input[type=text], textarea { width: 350px; outline: none; }
+
+.rowElem label.error { background: url(icon_alert.gif) no-repeat left; min-height: 15px; padding-left: 20px; vertical-align: middle; float: none; font-style: italic; color: red; position: absolute; top: 16px; left: 0; font-size: 12px; }
+
+.rowElem #jqTransformTextarea-mm label.error { top: 28px; }
+
+#changeTypeArea { float: left; margin: 0 0 10px 0; width: 350px; }
+
+.rowElem { position: relative; clear: both; min-height: 35px; }
+
+.thanks                     { color: green; font-weight: bold; }
+
+.jqTransformTextarea,
+.jqTransformSelectWrapper   { margin: 0 0 8px 0; }

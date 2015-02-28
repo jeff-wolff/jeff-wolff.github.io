@@ -1,0 +1,1 @@
+$(document).ready(function(){$.localScroll({duration:800,hash:true});$("#slideshow").before('<div id="nav">').cycle({fx:"fade",speed:700,timeout:3500,next:"#slideshow",pager:"#pager"})});
