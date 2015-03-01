@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://jeffwolff.net/</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/time_machine.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v1/</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v2/</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v3/</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v1/portfolio/</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v1/blog/</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v1/contact/</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v2/portfolio.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v2/about.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v2/contact.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v2/kanvaas.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v2/etdesignstudio.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v2/skarf.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v3/about.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v3/portfolio.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v3/resume.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://jeffwolff.net/v3/contact.html</loc>
+  <lastmod>2015-03-01T01:08:32+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.51</priority>
+</url>
+</urlset>
