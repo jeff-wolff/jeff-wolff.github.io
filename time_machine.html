@@ -17,18 +17,23 @@
 	  box-sizing: inherit;
 	}
 	body {
+		max-width: 680px;
 		max-width: 34rem;
 		margin: 0 auto;
+		padding: 20px;
 		padding: 1rem;
 	}
 	a { text-decoration: none; }
-	small { font-size: 0.618rem; }
+	small { font-size: 12px; font-size: 0.618rem; }
 	ol { padding: 0; }
+	span.logo span:first-child {
+		padding-left: .1rem;
+	}
 	span {
 		font-style: italic;
-		font-size: 64px;
-		letter-spacing: -2px;
-		word-spacing: 3px;
+		font-size: 52px;
+		font-size: 2.618rem;
+		letter-spacing: -1px;
 		-webkit-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
 		position: relative;
@@ -37,12 +42,12 @@
 		cursor: pointer;
 	}
 	span span {
-		font-style: normal;
 		font-size: 0;
 		opacity: 0;
 	}
 	span:hover span {
-		font-size: 64px;
+		font-size: 52px;
+		font-size: 2.618rem;
 		opacity: 1;
 	}
 	img {
@@ -61,7 +66,7 @@
 	</script>
 </head>
 <body>
-<a href="/"><span><span>Je</span>ff<span> Wol</span>ff</span></a>
+<a href="/"><span class="logo"><span>Je</span>ff<span> Wol</span>ff</span></a>
 <h1>Jeff Wolff Archive</h1>
 <p>Here are some of the past versions of my website.</p>
 <ol>
