@@ -37,17 +37,16 @@
 		-webkit-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
 		position: relative;
-		transition: all .5s ease-in-out;
+		transition: all .4s ease-in-out;
 		vertical-align: top;
 		cursor: pointer;
 	}
 	span span {
-		font-size: 0;
+		letter-spacing: -3rem;
 		opacity: 0;
 	}
-	span:hover span {
-		font-size: 52px;
-		font-size: 2.618rem;
+	span:hover span, span:focus span {
+		letter-spacing: 0;
 		opacity: 1;
 	}
 	img {
