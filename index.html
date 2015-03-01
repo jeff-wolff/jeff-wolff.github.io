@@ -7,12 +7,18 @@
 	<meta name="author" content="Jeff Wolff">
 	<meta name="description" content="Jeff Wolff is a California kid who muses about website design and development stuff that he thinks is cool– trends, resources, tutorials, and code snippets.">
 	<style>
-	body {
+	html, body {
+		box-sizing: border-box;
 		font-size: 125%;
 		line-height: 1.5;
-		max-width: 780px;
+	}
+	*, *:before, *:after {
+	  box-sizing: inherit;
+	}
+	body {
+		max-width: 34rem;
 		margin: 0 auto;
-		padding: 10px 30px;
+		padding: 1rem;
 	}
 	span {
 		font-style: italic;
@@ -35,6 +41,12 @@
 		font-size: 64px;
 		opacity: 1;
 	}
+	fieldset {
+		border: 1px solid #ddd;
+	}
+	legend {
+		font-size: .9rem;
+	}
 	</style>
 </head>
 <body>
@@ -55,6 +67,6 @@
 	<p>Want to see how this website looked like in the past? I have a <a href="time_machine.html">time machine</a>.</p>
 
 	<h2>My website design career</h2>
-	<p>Jeff Wolff currently works at Cuker building responsive and high performing websites for premier brands.</p>
+	<p>Jeff Wolff currently works at <a href="http://cukeragency.com" rel="nofollow" target="_blank">Cuker</a> building responsive and high performing websites for premier brands.</p>
 </body>
 </html>

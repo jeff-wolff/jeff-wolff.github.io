@@ -6,14 +6,22 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta name="author" content="Jeff Wolff">
 	<style>
-	body {
+  html,body{
+  	font-family: Georgia, serif;
+		box-sizing: border-box;
 		font-size: 125%;
 		line-height: 1.5;
-		max-width: 780px;
+	}
+	*, *:before, *:after {
+	  box-sizing: inherit;
+	}
+	body {
+		max-width: 34rem;
 		margin: 0 auto;
-		padding: 10px 30px;
+		padding: 1rem;
 	}
 	a { text-decoration: none; }
+	ol { padding: 0; }
 	span {
 		font-style: italic;
 		font-size: 64px;
@@ -35,6 +43,9 @@
 		font-size: 64px;
 		opacity: 1;
 	}
+	img {
+		width: 100%;
+	}
 	</style>
 </head>
 <body>
@@ -42,7 +53,16 @@
 <h1>Jeff Wolff Archive</h1>
 <p>Here are some of the past versions of my website.</p>
 <ol>
-	<li><a href="/v1" target="_blank">Version 1</a></li>
-	<li><a href="/v2" target="_blank">Version 2</a></li>
-	<li><a href="/v3" target="_blank">Version 3</a></li>
+	<li><a href="/v1" target="_blank">Version 1
+	<img src="img/jw-version-1.png" alt=""></a>
+
+	</li>
+	<li><a href="/v2" target="_blank">Version 2
+	<img src="img/jw-version-2.png" alt=""></a>
+
+	</li>
+	<li><a href="/v3" target="_blank">Version 3
+	<img src="img/jw-version-3.png" alt=""></a>
+
+	</li>
 </ol>
