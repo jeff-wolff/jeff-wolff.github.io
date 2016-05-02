@@ -21,22 +21,25 @@
     // initiate auth popup
     $("#login").on("click", function( event ) {
     	var song_list = [];
+    	var date_list = [];
     	event.preventDefault();
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities', { limit: 210 });
 	    }).then(function(me) {
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-	    			// song_list.push(me.collection[i].origin.uri);
-	    			// date_list.push(me.collection[i].created_at);
-	    			console.log(me.collection[i].origin.uri + ' ' + me.collection[i].created_at);
+	    			song_list.push(me.collection[i].origin.uri);
+	    			date_list.push(me.collection[i].created_at);
           		}
 	      	}
-	      	// console.log(song_list[0]);
-	      	// console.log(date_list[0]);
+	      	showArr(song_list, date_list);
 	    });
 	});
-
+	function showArr(song, date) {
+		for (var i = song.length - 1; i >= 0; i--) {
+			console.log(song[i] + ' ' + date[i]);
+		}
+	}
     </script>
 
   </body>
