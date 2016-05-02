@@ -35,12 +35,15 @@
 	      	}
 	      	song_list.reverse();
 	      	date_list.reverse();
-			for (var d = 0; d <= date_list.length - 1; d++) {
-				console.log(date_list[d] + ' -- ' + song_list[d]);
-			}
+			loadSongs(date_list, song_list);
 	    });
-	});
-    </script>
+  });
+  function loadSongs(date, song) {
+  	for (var d = 0; d <= date.length - 1; d++) {
+  		console.log(date[d] + ' -- ' + song[d]);
+  	}
+  }
+  </script>
 
   </body>
 </html>
