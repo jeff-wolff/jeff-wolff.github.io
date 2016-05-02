@@ -28,15 +28,15 @@
 	    }).then(function(me) {
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-        			// var uri = String(me.collection[i].origin.uri);
+        			var uri = me.collection[i].origin.uri;
         			var created_at = me.collection[i].created_at;
-
-        			// song_list.push(uri);
+        			console.log(uri);
+ 
 	    			// song_list.push(uri);
-	    			date_list.push(created_at);
+	    			// date_list.push(created_at);
           		}
 	      	}
-	      	console.log(date_list[0]);
+	      	// console.log(song_list[0]);
 	      	// console.log(date_list[0]);
 	    });
 	});
