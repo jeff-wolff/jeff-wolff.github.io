@@ -25,15 +25,13 @@
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities', { limit: 210 });
 	    }).then(function(me) {
-	    	// console.log(Object.keys(me.collection));
+	    	
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
 	      			song_list.push([me.collection[i].created_at, me.collection[i].origin.uri]);
           		}
 	      	}
-	      	for (i in song_list) {
-	      		console.log(song_list[i][0] + '\n');
-	      	}
+	      	console.log(Object.keys(song_list));
 	    });
 	});
     </script>
