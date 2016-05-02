@@ -45,7 +45,7 @@
 	    'http://soundcloud.com/oembed.json?url=' + SOUNDCLOUD_URL + WIDGET_OPTIONS 
 	  ).done( function ( data ) {
 	    var widget;
-	    $('body').html( data.html );
+	    $('#result').html( data.html );
 	    widget = SC.Widget($('body').find('iframe')[0]);
 	    widget.bind('ready', function () {
 	      alert('widget ready');
