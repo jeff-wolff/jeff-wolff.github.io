@@ -26,7 +26,7 @@
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities', { limit: 210 });
 	    }).then(function(me) {
-	    	
+	    	console.log(me.collection.length)
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
         			song_list.push(me.collection[i].origin.uri);
