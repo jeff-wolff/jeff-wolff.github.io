@@ -31,18 +31,18 @@
 	      			song_list.push(me.collection[i].stream_url);
           		}
 	      	}
-	      	for (i in song_list) {
-	      		console.log(Object.keys(song_list[i].origin) + '\n');
+	      	for (h in song_list) {
+	      		console.log(Object.keys(song_list[h].origin) + '\n');
 	      	}
 
-	      	for (var i = 0; i <= song_list.length - 1; i++) {
+	      	for (var j = 0; j <= song_list.length - 1; j++) {
 	      		$('#result').append('<iframe />');
 	      		$.getJSON( 
-	      		    'http://soundcloud.com/oembed.json?url=' + song_list[i]
+	      		    'http://soundcloud.com/oembed.json?url=' + song_list[j]
 	      		  ).done( function ( data ) {
 	      		    var widget;
 	      		    $('#result').html( data.html );
-	      		    widget = SC.Widget($('#result').find('iframe')[i]);
+	      		    widget = SC.Widget($('#result').find('iframe')[j]);
 	      		    widget.bind('ready', function () {
 	      		      // widget.play();
 	      		    });
