@@ -76,7 +76,7 @@
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities');
 	    }).then(function(me) {
-	      alert('Hello, ' + me.track);
+	      console.log('Hello, ' + me);
 	    });
 	});
     </script>
