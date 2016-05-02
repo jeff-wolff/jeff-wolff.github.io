@@ -9,7 +9,7 @@
   <body>
 
     <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
-
+	<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/242663755&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -20,7 +20,7 @@
 
     // initiate auth popup
     $("#login").on("click", function( event ) {
-    	var song_list = [];
+    	var song_list = [][];
     	event.preventDefault();
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities', { limit: 210 });
@@ -28,11 +28,11 @@
 	    	// console.log(Object.keys(me.collection));
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-	      			song_list.push(me.collection[i]);
+	      			song_list.push(me.collection[i].created_at[me.collection[i].stream_url]);
           		}
 	      	}
 	      	for (i in song_list) {
-	      		console.log(Object.keys(song_list[i].origin) + '\n');
+	      		console.log(i '\n');
 	      	}
 	    });
 	});
