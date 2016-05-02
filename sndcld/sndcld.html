@@ -33,9 +33,10 @@
         			date_list.push(me.collection[i].created_at);
           		}
 	      	}
-	      	song_list.reverse();
-	      	date_list.reverse();
-			loadSongs(date_list, song_list);
+	      	console.log(song_list[0]);
+	      	console.log(date_list[0]);
+	      	// song_list.reverse();
+	      	// date_list.reverse();
 	    });
   });
   function loadSongs(date, song) {
