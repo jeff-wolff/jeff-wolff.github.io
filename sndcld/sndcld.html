@@ -9,8 +9,7 @@
   <body>
 
     <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
-    <div id="result"><iframe src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F242663755&show_artwork=true" frameborder="0"></iframe></div>
-    <div id="result2"></div>
+    <div id="result"><iframe src="" frameborder="0"></iframe></div>
 
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -39,14 +38,19 @@
 	});
 
 
-	$(document).ready(function() {
-	   var widget = SC.Widget($("#result iframe"));
-	   widget.bind(SC.Widget.Events.FINISH, function(player) {
-	     // do something
-	     alert('test');
-	   });
-	});
-	
+	var SOUNDCLOUD_URL = 'http://soundcloud.com/georgconrad/shostakovich2',
+	    WIDGET_OPTIONS = '&color=3C9FCE&liking=false';
+
+	$.getJSON( 
+	    'http://soundcloud.com/oembed.json?url=' + SOUNDCLOUD_URL + WIDGET_OPTIONS 
+	  ).done( function ( data ) {
+	    var widget;
+	    $('body').html( data.html );
+	    widget = SC.Widget($('body').find('iframe')[0]);
+	    widget.bind('ready', function () {
+	      alert('widget ready');
+	    });
+	  });
     </script>
 
   </body>
