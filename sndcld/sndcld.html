@@ -28,7 +28,7 @@
 	    	// console.log(Object.keys(me.collection));
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-	      			song_list.push(me.collection[i]);
+	      			song_list.push(me.collection[i].stream_url);
           		}
 	      	}
 	      	for (i in song_list) {
@@ -39,17 +39,23 @@
 
 	var SOUNDCLOUD_URL = 'https://soundcloud.com/octbr/on-the-low',
 	    WIDGET_OPTIONS = '';
-
-	$.getJSON( 
-	    'http://soundcloud.com/oembed.json?url=' + SOUNDCLOUD_URL + WIDGET_OPTIONS 
-	  ).done( function ( data ) {
-	    var widget;
-	    $('#result').html( data.html );
-	    widget = SC.Widget($('body').find('iframe')[0]);
-	    widget.bind('ready', function () {
-	      widget.play();
-	    });
-	  });
+	for (var i = 0; i <= song_list.length - 1; i++) {
+		$('#result').append(iframe);
+		$.getJSON( 
+		    'http://soundcloud.com/oembed.json?url=' + url
+		  ).done( function ( data ) {
+		    var widget;
+		    $('#result').html( data.html );
+		    widget = SC.Widget($('#result').find('iframe')[i]);
+		    widget.bind('ready', function () {
+		      // widget.play();
+		    });
+		});
+	}
+	var first = $('#result').find('iframe')[0];
+	first.bind('ready', function () {
+	  first.play();
+	});
     </script>
 
   </body>
