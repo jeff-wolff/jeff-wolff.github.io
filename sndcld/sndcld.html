@@ -20,7 +20,7 @@
 
     // initiate auth popup
     $("#login").on("click", function( event ) {
-    	var song_list = [][];
+    	var song_list = [];
     	event.preventDefault();
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities', { limit: 210 });
