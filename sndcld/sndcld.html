@@ -27,12 +27,13 @@
 	    }).then(function(me) {
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-	    			song_list.push(me.collection[i].origin.uri);
-	    			date_list.push(me.collection[i].created_at);
+	    			// song_list.push(me.collection[i].origin.uri);
+	    			// date_list.push(me.collection[i].created_at);
+	    			console.log(me.collection[i].origin.uri + ' ' + me.collection[i].created_at);
           		}
 	      	}
-	      	console.log(song_list[0]);
-	      	console.log(date_list[0]);
+	      	// console.log(song_list[0]);
+	      	// console.log(date_list[0]);
 	    });
 	});
 
