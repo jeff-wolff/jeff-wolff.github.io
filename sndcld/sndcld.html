@@ -31,14 +31,11 @@
 	    			date_list.push(me.collection[i].created_at);
           		}
 	      	}
-	      	showArr(song_list, date_list);
+	      	console.log(song_list[0]);
+	      	console.log(date_list[0]);
 	    });
 	});
-	function showArr(song, date) {
-		for (var i = song.length - 1; i >= 0; i--) {
-			console.log(song[i] + ' ' + date[i]);
-		}
-	}
+
     </script>
 
   </body>
