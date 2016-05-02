@@ -31,6 +31,11 @@
 	      		console.log(Object.keys(song_list[i].origin) + '\n');
 	      	}
 	    });
+	    
+	    var track_url = 'http://soundcloud.com/forss/flickermood';
+	    SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
+	      console.log('oEmbed response: ', oEmbed);
+	    });
 	});
     </script>
 
