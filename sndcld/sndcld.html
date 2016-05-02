@@ -28,7 +28,7 @@
 	    	// console.log(Object.keys(me.collection));
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-	      			song_list.push([me.collection[i].created_at, me.collection[i].stream_url]);
+	      			song_list.push(me.collection[i].stream_url);
           		}
 	      	}
 	      	for (i in song_list) {
