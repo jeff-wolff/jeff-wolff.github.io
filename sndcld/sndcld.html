@@ -41,7 +41,7 @@
 	SC.oEmbed(track_url, { element: result });
 	SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
 	
-	var widget = SC.Widget(document.getElementById("result"));
+	var widget = SC.Widget(document.querySelector("result iframe"));
 	widget.bind(SC.Widget.Events.FINISH, function(player) {
 	  // do something
 	  alert('test');
