@@ -36,8 +36,11 @@
 	});
 
 	var track_url = 'http://soundcloud.com/forss/flickermood';
-	SC.oEmbed(track_url, { auto_play: true, element: result });
+	SC.oEmbed(track_url, { element: result });
 	SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
+	soundcloud.addEventListener('onPlayerReady', function(player, data) {
+	    player.api_play();
+	});
     </script>
 
   </body>
