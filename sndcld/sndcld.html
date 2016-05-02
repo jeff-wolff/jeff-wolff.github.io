@@ -22,7 +22,7 @@
 	    }).then(function(me) {
 	    	console.log(Object.keys(me.collection));
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
-	    		console.log(me.collection.type);
+	    		console.log(me.collection[i].type);
         		if (me.collection.type === "track") {
 	      			console.log(me.collection[i]);
           		}
