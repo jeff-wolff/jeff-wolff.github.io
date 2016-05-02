@@ -30,6 +30,7 @@
     </style>
   </head>
   <body>
+<!-- 
     <p>
       This example demonstrates the usage of the SDK's oEmbed method.
     </p>
@@ -41,7 +42,6 @@
     </form>
     <div id="result"></div>
     <textarea rows="8" id="code"></textarea>
-<!-- 
     <script type="text/javascript">
       SC.initialize({
         client_id: '5afcef3388a0bd8047f1ab79a58d3faa'
@@ -63,6 +63,7 @@
         });
       });
     </script> -->
+    <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
     <script type="text/javascript">
     SC.initialize({
       client_id: '5afcef3388a0bd8047f1ab79a58d3faa',
@@ -70,11 +71,14 @@
     });
 
     // initiate auth popup
-    SC.connect().then(function() {
-      return SC.get('/me');
-    }).then(function(me) {
-      alert('Hello, ' + me.username);
-    });
+    document.getElementById("login").addEventListener("click", function( event ) {
+    	event.preventDefault();
+	    SC.connect().then(function() {
+	      return SC.get('/me');
+	    }).then(function(me) {
+	      alert('Hello, ' + me.username);
+	    });
+	});
     </script>
 
   </body>
