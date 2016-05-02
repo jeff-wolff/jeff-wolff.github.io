@@ -76,7 +76,7 @@
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities');
 	    }).then(function(me) {
-	      console.log('Hello, ' + me);
+	      console.log(Object.keys(me));
 	    });
 	});
     </script>
