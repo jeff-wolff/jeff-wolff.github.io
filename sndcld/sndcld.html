@@ -35,23 +35,23 @@
 	      		console.log(Object.keys(song_list[h].origin) + '\n');
 	      	}
 
-	      	for (var j = 0; j <= song_list.length - 1; j++) {
-	      		$('#result').append('<iframe />');
-	      		$.getJSON( 
-	      		    'http://soundcloud.com/oembed.json?url=' + song_list[j]
-	      		  ).done( function ( data ) {
-	      		    var widget;
-	      		    $('#result').html( data.html );
-	      		    widget = SC.Widget($('#result').find('iframe')[j]);
-	      		    widget.bind('ready', function () {
-	      		      // widget.play();
-	      		    });
-	      		});
-	      	}
-	      	var first = $('#result').find('iframe')[0];
-	      	first.bind('ready', function () {
-	      	  first.play();
-	      	});
+	      	// for (var j = 0; j <= song_list.length - 1; j++) {
+	      	// 	$('#result').append('<iframe />');
+	      	// 	$.getJSON( 
+	      	// 	    'http://soundcloud.com/oembed.json?url=' + song_list[j]
+	      	// 	  ).done( function ( data ) {
+	      	// 	    var widget;
+	      	// 	    $('#result').html( data.html );
+	      	// 	    widget = SC.Widget($('#result').find('iframe')[j]);
+	      	// 	    widget.bind('ready', function () {
+	      	// 	      // widget.play();
+	      	// 	    });
+	      	// 	});
+	      	// }
+	      	// var first = $('#result').find('iframe')[0];
+	      	// first.bind('ready', function () {
+	      	//   first.play();
+	      	// });
 
 
 	    });
