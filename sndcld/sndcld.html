@@ -13,7 +13,11 @@
     <div id="result2"></div>
 
     
-    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946"></iframe>
+    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player"></iframe>
+    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player2"></iframe>
+    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player3"></iframe>
+    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player4"></iframe>
+    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player5"></iframe>
 
     <script type="text/javascript">
     SC.initialize({
@@ -43,7 +47,7 @@
 	// var track_url = 'http://soundcloud.com/forss/flickermood';
 	// SC.oEmbed(track_url, { element: result });
 	// SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
-	var player = player1;
+	var player = player;
 	soundcloud.addEventListener('onPlayerReady', function(player, data) {
 	  // please refer to the documentation for the full list of available methods
 	  // btw, here the flash can be accessed too as 'this' like in 'this.api_play()'
