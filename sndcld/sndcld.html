@@ -37,11 +37,11 @@
 	    });
 	});
 
+   var track_url = 'http://soundcloud.com/forss/flickermood';
+   SC.oEmbed(track_url, { element: result });
+   SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
 
 	(function() {
-	   var track_url = 'http://soundcloud.com/forss/flickermood';
-	   SC.oEmbed(track_url, { element: result });
-	   SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
 	   var widget = SC.Widget(document.querySelector("#result iframe"));
 	   widget.bind(SC.Widget.Events.FINISH, function(player) {
 	     // do something
