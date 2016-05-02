@@ -9,7 +9,7 @@
   <body>
 
     <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
-    <div id="result"></div>
+    <div id="result"><iframe src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F242663755&show_artwork=true" frameborder="0"></iframe></div>
     <div id="result2"></div>
 
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
@@ -38,9 +38,6 @@
 	    });
 	});
 
-   var track_url = 'http://soundcloud.com/forss/flickermood';
-   SC.oEmbed(track_url, { element: result });
-   SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
 
 	$(document).ready(function() {
 	   var widget = SC.Widget($("#result iframe"));
