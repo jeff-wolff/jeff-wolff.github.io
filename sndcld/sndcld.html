@@ -28,10 +28,11 @@
 	    	
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-	      			song_list.push([me.collection[i].created_at, me.collection[i].origin.uri]);
+        			console.log(me.collection[i].origin.uri);
+	      			// song_list.push([me.collection[i].created_at, me.collection[i].origin.uri]);
           		}
 	      	}
-	      	console.log(Object.keys(song_list));
+	      	
 	    });
 	});
     </script>
