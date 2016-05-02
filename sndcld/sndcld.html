@@ -9,7 +9,7 @@
   <body>
 
     <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
-    <div id="result"><iframe src="" frameborder="0"></iframe></div>
+
 
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -28,7 +28,7 @@
 	    	// console.log(Object.keys(me.collection));
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-	      			song_list.push(me.collection[i].stream_url);
+	      			song_list.push(me.collection[i]);
           		}
 	      	}
 	      	for (i in song_list) {
@@ -36,23 +36,6 @@
 	      	}
 	    });
 	});
-
-	// var SOUNDCLOUD_URL = 'https://soundcloud.com/octbr/on-the-low',
-	//     WIDGET_OPTIONS = '';
-	// for (var i = 0; i <= song_list.length - 1; i++) {
-	// 	$('#result').append(iframe);
-	// 	$.getJSON( 
-	// 	    'http://soundcloud.com/oembed.json?url=' + url
-	// 	  ).done( function ( data ) {
-	// 	    var widget;
-	// 	    $('#result').html( data.html );
-	// 	    widget = SC.Widget($('#result').find('iframe')[i]);
-	// 	    widget.bind('ready', function () {
-	// 	      // widget.play();
-	// 	    });
-	// 	});
-	// }
-	
     </script>
 
   </body>
