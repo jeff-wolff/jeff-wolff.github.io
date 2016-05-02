@@ -36,7 +36,7 @@
 	      	}
 
 	      	for (var i = 0; i <= song_list.length - 1; i++) {
-	      		$('#result').append(iframe);
+	      		$('#result').append('iframe');
 	      		$.getJSON( 
 	      		    'http://soundcloud.com/oembed.json?url=' + song_list[i]
 	      		  ).done( function ( data ) {
