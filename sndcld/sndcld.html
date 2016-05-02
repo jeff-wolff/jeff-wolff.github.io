@@ -74,7 +74,7 @@
     document.getElementById("login").addEventListener("click", function( event ) {
     	event.preventDefault();
 	    SC.connect().then(function() {
-	      return SC.get('/me/activies');
+	      return SC.get('/me/activties');
 	    }).then(function(me) {
 	      alert('Hello, ' + me.track);
 	    });
