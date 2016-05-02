@@ -29,7 +29,7 @@
 	    }).then(function(me) {
 	    	for (var i = 0; i <= me.collection.length - 1; i++) {
         		if (me.collection[i].type === "track") {
-        			console.log(Object.keys(me.collection[i]));
+        			console.log(Object.keys(me.collection[i].origin));
         			// song_list.push(me.collection[i].origin.uri);
         			// date_list.push(me.collection[i].created_at);
           		}
