@@ -9,6 +9,7 @@
 
     <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
     <div id="result"></div>
+    <div id="result2"></div>
     <script type="text/javascript">
     SC.initialize({
       client_id: '5afcef3388a0bd8047f1ab79a58d3faa',
@@ -35,7 +36,8 @@
 	});
 
 	var track_url = 'http://soundcloud.com/forss/flickermood';
-	SC.oEmbed(track_url, { auto_play: true, element: result }).then(function(oEmbed) {});
+	SC.oEmbed(track_url, { auto_play: true, element: result });
+	SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
     </script>
 
   </body>
