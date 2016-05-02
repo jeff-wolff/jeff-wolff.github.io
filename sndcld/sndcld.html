@@ -23,6 +23,7 @@
     	var song_list = [];
     	var date_list = [];
     	event.preventDefault();
+    	
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities', { limit: 210 });
 	    }).then(function(me) {
@@ -32,11 +33,12 @@
         			date_list.push(me.collection[i].created_at);
           		}
 	      	}
-	      	console.log(song_list[0]);
-	      	console.log(date_list[0]);
-	      	// song_list.reverse();
-	      	// date_list.reverse();
 	    });
+
+	   console.log(song_list[0]);
+	   console.log(date_list[0]);
+	   // song_list.reverse();
+	   // date_list.reverse(); 
   });
   function loadSongs(date, song) {
   	console.log(date);
