@@ -4,65 +4,9 @@
     <meta charset="utf-8">
     <title>SDK playground - oEmbed</title>
     <script type="text/javascript" src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
-    <style media="screen">
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: sans-serif;
-      }
-
-      input {
-        font-size: 20px;
-      }
-
-      #result, input, textarea, p {
-        width: 90%;
-        margin-bottom: 10px;
-        margin-top: 0;
-      }
-
-      @media (min-width: 500px) {
-        #result, input, textarea, p {
-          width: 500px;
-        }
-      }
-    </style>
   </head>
   <body>
-<!-- 
-    <p>
-      This example demonstrates the usage of the SDK's oEmbed method.
-    </p>
-    <p>
-      It will embed a widget for the given URL and log the HTML code.
-    </p>
-    <form id="urlForm">
-      <input id="url" placeholder="A SoundCloud URL" autofocus />
-    </form>
-    <div id="result"></div>
-    <textarea rows="8" id="code"></textarea>
-    <script type="text/javascript">
-      SC.initialize({
-        client_id: '5afcef3388a0bd8047f1ab79a58d3faa'
-      });
 
-      var urlForm = document.getElementById('urlForm');
-      var url = document.getElementById('url');
-      var result = document.getElementById('result');
-      var code = document.getElementById('code');
-
-      urlForm.addEventListener('submit', function(event){
-        event.preventDefault();
-        SC.oEmbed(url.value, {
-          element: result
-        }).then(function(embed){
-          code.value = embed.html;
-        }).catch(function(error){
-          code.value = error.message;
-        });
-      });
-    </script> -->
     <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
     <script type="text/javascript">
     SC.initialize({
@@ -76,10 +20,12 @@
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities', { limit: 210 });
 	    }).then(function(me) {
-	      console.log(Object.keys(me.collection));
-	      for (var i = me.collection.length - 1; i >= 0; i--) {
-	      	console.log(me.collection[i]);
-	      }
+	    	console.log(Object.keys(me.collection));
+	    	for (var i = me.collection.length - 1; i >= 0; i--) {
+        		if (me.collection.type === "track") {
+	      			console.log(me.collection[i]);
+          		}
+	      	}
 	    });
 	});
     </script>
