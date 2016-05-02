@@ -12,13 +12,6 @@
     <div id="result"></div>
     <div id="result2"></div>
 
-    
-    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player"></iframe>
-    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player2"></iframe>
-    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player3"></iframe>
-    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player4"></iframe>
-    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261015946" id="player5"></iframe>
-
     <script type="text/javascript">
     SC.initialize({
       client_id: '5afcef3388a0bd8047f1ab79a58d3faa',
@@ -44,14 +37,14 @@
 	    });
 	});
 
-	// var track_url = 'http://soundcloud.com/forss/flickermood';
-	// SC.oEmbed(track_url, { element: result });
-	// SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
-	var player = player;
-	soundcloud.addEventListener('onPlayerReady', function(player, data) {
-	  // please refer to the documentation for the full list of available methods
-	  // btw, here the flash can be accessed too as 'this' like in 'this.api_play()'
-	  player.api_play();
+	var track_url = 'http://soundcloud.com/forss/flickermood';
+	SC.oEmbed(track_url, { element: result });
+	SC.oEmbed('https://soundcloud.com/octbr/on-the-low', { element: result2 });
+	
+	var widget = SC.Widget(document.getElementById("result"));
+	widget.bind(SC.Widget.Events.FINISH, function(player) {
+	  // do something
+	  alert('test');
 	});
     </script>
 
