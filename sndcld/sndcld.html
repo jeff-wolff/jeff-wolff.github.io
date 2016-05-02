@@ -48,7 +48,7 @@
 	    $('#result').html( data.html );
 	    widget = SC.Widget($('body').find('iframe')[0]);
 	    widget.bind('ready', function () {
-	      alert('widget ready');
+	      widget.play();
 	    });
 	  });
     </script>
