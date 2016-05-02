@@ -77,6 +77,9 @@
 	      return SC.get('/me/activities');
 	    }).then(function(me) {
 	      console.log(Object.keys(me.collection));
+	      for (var i = me.collection.length - 1; i >= 0; i--) {
+	      	me.collection[i]
+	      }
 	    });
 	});
     </script>
