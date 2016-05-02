@@ -27,20 +27,19 @@
 	    SC.connect().then(function() {
 	      return SC.get('/me/activities', { limit: 210 });
 	    }).then(function(me) {
-	    	for (var i = me.collection.length; i >= 1; i--) {
+	    	for (var i = 0; i <= me.collection.length - 1; i++) {
         		if (me.collection[i].type === "track") {
         			song_list.push(me.collection[i].origin.uri);
         			date_list.push(me.collection[i].created_at);
+        			console.log(i);
           		}
 	      	}
-	    }).then(function(){
-	    	console.log(song_list[0]);
-	    	console.log(date_list[0]);
-	    	// song_list.reverse();
-	    	// date_list.reverse(); 
 	    });
 
-	   
+	   console.log(song_list[0]);
+	   console.log(date_list[0]);
+	   // song_list.reverse();
+	   // date_list.reverse(); 
   });
   function loadSongs(date, song) {
   	console.log(date);
