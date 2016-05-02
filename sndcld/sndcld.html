@@ -28,7 +28,7 @@
 	    }).then(function(me) {
 	    	for (var i = me.collection.length - 1; i >= 0; i--) {
         		if (me.collection[i].type === "track") {
-        			var uri = me.collection[i].origin.uri;
+        			var uri = String(me.collection[i].origin.uri);
         			var created_at = me.collection[i].created_at;
         			song_list.push(uri);
 	    			// song_list.push(uri);
