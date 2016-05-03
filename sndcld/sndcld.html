@@ -85,7 +85,7 @@ $(function(){
             }
             song_list.reverse();
             date_list.reverse();
-            console.log('done.. ' + og_tracks + ' tracks found.');
+            console.log('done.. ' + og_tracks + ' tracks found. ' + Object.keys(user.collection));
             for (var i = 0; i < song_list.length; i++) {
                 var date = new Date(date_list[i]);
                 $('<h4>'+timeSince(date)+' ago</h4><iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" />').appendTo('#result');
