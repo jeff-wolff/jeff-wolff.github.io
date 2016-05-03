@@ -1,5 +1,6 @@
 SNDCLD.COM
 TODO: Keyboard shortcuts 
 		space = play/pause
+      lazy load
       save oauth token in local storage
-      monetize buy URLs using hacky javascript
+      monetize buy URLs using hacky javascript (itunes search api and detecting redirecting domains)
