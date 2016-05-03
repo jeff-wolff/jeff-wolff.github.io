@@ -1,0 +1,8 @@
+SNDCLD.COM
+TODO: Keyboard shortcuts 
+		space = play/pause
+      lazy load
+      save oauth token in local storage
+      monetize buy URLs using hacky javascript (itunes search api and detecting redirecting domains)
+
+      ["artwork_url", "comment_count", "commentable", "description", "download_count", "downloadable", "embeddable_by", "favoritings_count", "genre", "isrc", "label_id", "label_name", "license", "original_content_size", "original_format", "playback_count", "purchase_title", "purchase_url", "release", "release_day", "release_month", "release_year", "reposts_count", "state", "streamable", "tag_list", "track_type", "user", "likes_count", "attachments_uri", "bpm", "key_signature", "user_favorite", "user_playback_count", "video_url", "id", "kind", "created_at", "last_modified", "permalink", "permalink_url", "title", "duration", "sharing", "waveform_url", "stream_url", "uri", "user_id", "user_uri"]
