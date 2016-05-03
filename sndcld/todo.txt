@@ -1,0 +1,5 @@
+SNDCLD.COM
+TODO: Keyboard shortcuts 
+		space = play/pause
+      save oauth token in local storage
+      monetize buy URLs using hacky javascript
