@@ -47,6 +47,9 @@ var initWidget = function(w, tracks) {
             $('#result iframe').removeClass('expand');
             $(w).addClass('expand');
         });
+        widget.bind(SC.Widget.Events.PAUSE, function() {
+            $(w).removeClass('expand');
+        });
         widget.bind(SC.Widget.Events.FINISH, function() {
             try {
                 $(w).removeClass('expand');
