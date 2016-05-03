@@ -76,7 +76,7 @@ $(function(){
                 limit: length + 13
             });
         }).then(function(user) {
-            console.log(Object.getOwnPropertyNames(user.collection.origin));
+            console.log(Object.keys(user.collection.origin));
             var og_tracks = 0;
             for (var i = user.collection.length - 1; i >= 0; i--) {
                 if (user.collection[i].type === "track" && user.collection[i].origin !== null) {
