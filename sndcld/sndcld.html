@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>SDK playground - oEmbed</title>
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js" type="text/javascript"></script>
-    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-  </head>
-  <body>
+<head>
+<meta charset="utf-8">
+<title>SDK playground - oEmbed</title>
+<script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js" type="text/javascript"></script>
+<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+<style>
+    .wrap {
+        max-width: 1440px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    iframe {
+        width: 100%;
+        border: none;
+        margin-bottom: 30px;
+    }
+</style>
+</head>
+<body>
 
-    <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
-	<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/242663755&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+<div class="wrap">
+<a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
 
-	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    SC.initialize({
-      client_id: '5afcef3388a0bd8047f1ab79a58d3faa',
-      redirect_uri: 'http://jeffwolff.net/sndcld/callback.html'
+<div id="result"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+SC.initialize({
+    client_id: '5afcef3388a0bd8047f1ab79a58d3faa',
+    redirect_uri: 'http://localhost:8000/callback.html'
+});
+var timeSince=function(o){"object"!=typeof o&&(o=new Date(o));var e,t=Math.floor((new Date-o)/1e3),a=Math.floor(t/31536e3);return a>=1?e="year":(a=Math.floor(t/2592e3),a>=1?e="month":(a=Math.floor(t/86400),a>=1?e="day":(a=Math.floor(t/3600),a>=1?e="hour":(a=Math.floor(t/60),a>=1?e="minute":(a=t,e="second"))))),(a>1||0===a)&&(e+="s"),a+" "+e};
+
+$(function(){
+    // initiate auth popup
+    $("#login").on("click", function(event) {
+        event.preventDefault();
+        var song_list = [];
+        var date_list = [];
+        var length = 200;
+        SC.connect().then(function() {
+            return SC.get('/me/activities', {
+                limit: length + 13
+            });
+
+        }).then(function(user) {
+            var og_tracks = 0;
+            for (var i = user.collection.length - 1; i >= 0; i--) {
+                if (user.collection[i].type === "track" && user.collection[i].origin !== null) {
+                    song_list.push(user.collection[i].origin.uri);
+                    date_list.push(user.collection[i].created_at);
+                    og_tracks = og_tracks + 1;
+                }
+            }
+            song_list.reverse();
+            date_list.reverse();
+            console.log('done.. ' + og_tracks + ' tracks found.');
+            for (var i = 0; i < song_list.length; i++) {
+                var date = new Date(date_list[i]);
+                $('<h4>'+timeSince(date)+' ago</h4><iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" />').appendTo('#result');
+                // console.log(song_list[i] + ' ' + date_list[i]);
+            }
+        });
     });
 
-    // initiate auth popup
-    $("#login").on("click", function( event ) {
-    	var song_list = [];
-    	var date_list = [];
-    	event.preventDefault();
-	    SC.connect().then(function() {
-	      return SC.get('/me/activities', { limit: 210 });
-	    }).then(function(me) {
-	    	for (var i = me.collection.length - 1; i >= 0; i--) {
-        		if (me.collection[i].type === "track") {
-        			var uri = me.collection[i].origin.uri;
-        			var created_at = me.collection[i].created_at;
-        			// console.log(uri);
- 
-	    			song_list.push(uri);
-	    			// date_list.push(created_at);
-          		}
-	      	}
-	      	console.log(song_list[0]);
-	      	// console.log(date_list[0]);
-	    });
-	});
-	
-    </script>
+});
+</script>
 
-  </body>
+</body>
 </html>
