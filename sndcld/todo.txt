@@ -1,4 +1,4 @@
-SNDCLD.COM
+SNDCLD.COM - MINIMALISTSOUND.COM/CLOUD
 TODO: Keyboard shortcuts 
 		space = play/pause
       lazy load
