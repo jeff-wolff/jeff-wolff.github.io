@@ -16,7 +16,7 @@
     }
     iframe {
         width: 100%;
-        min-height: 150px;
+        min-height: 160px;
         border: none;
         margin-bottom: 30px;
         transition: min-height 300ms ease-in-out;
@@ -44,15 +44,15 @@ var initWidget = function(w, tracks) {
     widget.bind(SC.Widget.Events.READY, function() {
                         
         widget.bind(SC.Widget.Events.PLAY, function() {
-            $('#result iframe').removeClass('expand');
-            $(w).addClass('expand');
+            // $('#result iframe').removeClass('expand');
+            // $(w).addClass('expand');
         });
         widget.bind(SC.Widget.Events.PAUSE, function() {
-            $(w).removeClass('expand');
+            // $(w).removeClass('expand');
         });
         widget.bind(SC.Widget.Events.FINISH, function() {
             try {
-                $(w).removeClass('expand');
+                // $(w).removeClass('expand');
                 var next = SC.Widget(($(w).next().next()[0]));
             }
             catch (e) {
@@ -89,7 +89,7 @@ $(function(){
             console.log('done.. ' + og_tracks + ' tracks found.');
             for (var i = 0; i < song_list.length; i++) {
                 var date = new Date(date_list[i]);
-                $('<h4>'+timeSince(date)+' ago</h4><iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false" />').appendTo('#result');
+                $('<h4>'+timeSince(date)+' ago</h4><iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false" />').appendTo('#result');
             }
             $("#result iframe").each(function() {
                 initWidget(this, og_tracks);
