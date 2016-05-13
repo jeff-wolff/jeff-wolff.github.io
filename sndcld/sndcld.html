@@ -47,9 +47,7 @@
 <script type="text/javascript">
 SC.initialize({
     client_id: '5afcef3388a0bd8047f1ab79a58d3faa',
-    redirect_uri: 'http://jeffwolff.net/sndcld/callback.html',
-    oauth_token: localStorage.getItem('oauth_token') || undefined,
-    scope: 'non-expiring'
+    redirect_uri: 'http://jeffwolff.net/sndcld/callback.html'
 });
 var volumeNum = .3;
 var timeSince=function(o){"object"!=typeof o&&(o=new Date(o));var e,t=Math.floor((new Date-o)/1e3),a=Math.floor(t/31536e3);return a>=1?e="year":(a=Math.floor(t/2592e3),a>=1?e="month":(a=Math.floor(t/86400),a>=1?e="day":(a=Math.floor(t/3600),a>=1?e="hour":(a=Math.floor(t/60),a>=1?e="minute":(a=t,e="second"))))),(a>1||0===a)&&(e+="s"),a+" "+e};
@@ -96,20 +94,14 @@ function setVolume(v) {
 }
 
 $(function(){
-     var auth = localStorage.getItem('auth-token');
-     if (auth) {
-         $('#login').hide();
-         params.access_token = auth;
-         SC.initialize(params);
-     }
+     
     // initiate auth popup
     $("#login").on("click", function(event) {
         event.preventDefault();
         var song_list = [];
         var date_list = [];
         var length = 200;
-        SC.connect().then(({{ oauth_token }}) => {
-            localStorage.setItem('oauth_token', oauth_token);
+        SC.connect().then(function() {
             $("#login").hide();
             return SC.get('/me/activities', {
                 limit: length + 13
