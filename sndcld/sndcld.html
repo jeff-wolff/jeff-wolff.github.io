@@ -102,6 +102,7 @@ function setVolume(v, w) {
     try {
         var widget = SC.Widget($('#result iframe.current')[0]);
         volumeNum = v;
+        console.log('v ' + v);
         w.setVolume(v);
     }
     catch (e) {
