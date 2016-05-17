@@ -63,7 +63,7 @@ var initWidget = function(w, i) {
             widget.setVolume(volumeNum);
             $('#result iframe').removeClass('current');
             $(w).addClass('current');
-            $(w).append("#volume-slider").slider({
+            $(w).append("<div id='volume-slider'></div>").slider({
                 orientation: "vertical",
                 min: 0,
                 max: 100,
