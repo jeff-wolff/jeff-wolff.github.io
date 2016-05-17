@@ -64,6 +64,17 @@ var initWidget = function(w, i) {
             widget.setVolume(volumeNum);
             $('#result iframe').removeClass('current');
             $(w).addClass('current');
+            $("#volume-slider").slider({
+                orientation: "vertical",
+                min: 0,
+                max: 100,
+                value: 30,
+                    range: "min",
+                    animate: true,
+                slide: function(event, ui) {
+                  setVolume((ui.value) / 100, widget);
+                }
+              });
         });
         widget.bind(SC.Widget.Events.PAUSE, function() {
             $(w).removeClass('current');
@@ -82,11 +93,11 @@ var initWidget = function(w, i) {
     });          
 }
 
-function setVolume(v) {
+function setVolume(v, w) {
     try {
         var widget = SC.Widget($('#result iframe.current')[0]);
         volumeNum = v;
-        widget.setVolume(v);
+        w.setVolume(v);
     }
     catch (e) {
         console.log('No player widget found.');
@@ -126,17 +137,7 @@ $(function(){
             $("#result iframe").each(function(i) {
                 initWidget(this, i);
             });
-            $("#volume-slider").slider({
-                orientation: "vertical",
-                min: 0,
-                max: 100,
-                value: 30,
-                    range: "min",
-                    animate: true,
-                slide: function(event, ui) {
-                  setVolume((ui.value) / 100);
-                }
-              });
+            
         });
 
     });
