@@ -34,7 +34,6 @@
 </style>
 </head>
 <body>
-<div id="volume-slider"></div>
 <div class="wrap">
 <a href="#" id="login"><img src="http://connect.soundcloud.com/2/btn-connect-sc-l.png" alt=""></a>
 
@@ -64,7 +63,7 @@ var initWidget = function(w, i) {
             widget.setVolume(volumeNum);
             $('#result iframe').removeClass('current');
             $(w).addClass('current');
-            $("#volume-slider").slider({
+            $(w).append("#volume-slider").slider({
                 orientation: "vertical",
                 min: 0,
                 max: 100,
