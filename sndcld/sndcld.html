@@ -16,15 +16,20 @@
     .expand {
         min-height: 400px;
     }
+    .track {
+        position: relative;
+    }
     iframe {
-        width: 100%;
+        width: 98%;
         min-height: 160px;
         border: none;
         margin-bottom: 30px;
         transition: min-height 300ms ease-in-out;
     }
     #volume-slider { 
-        position: fixed;
+        position: absolute;
+        top: 40px;
+        right: 0;
         width: 10px;
         cursor: pointer;
     }
@@ -132,7 +137,7 @@ $(function(){
             console.log('done.. ' + og_tracks + ' tracks found.');
             for (var i = 0; i < song_list.length; i++) {
                 var date = new Date(date_list[i]);
-                $('<h4>'+timeSince(date)+' ago</h4><iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false" />').appendTo('#result');
+                $('<div class="track"><h4>'+timeSince(date)+' ago</h4><iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false" /></div>').appendTo('#result');
             }
             $("#result iframe").each(function(i) {
                 initWidget(this, i);
