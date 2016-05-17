@@ -116,7 +116,7 @@ $(function(){
         event.preventDefault();
         var song_list = [];
         var date_list = [];
-        var length = 25;
+        var length = 50;
         SC.connect().then(function() {
             $("#login").hide();
             return SC.get('/me/activities', {
