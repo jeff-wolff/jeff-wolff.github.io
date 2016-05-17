@@ -63,7 +63,8 @@ var initWidget = function(w, i) {
             widget.setVolume(volumeNum);
             $('#result iframe').removeClass('current');
             $(w).addClass('current');
-            $(w).after("<div id='volume-slider'></div>").slider({
+            $(w).after("<div id='volume-slider'></div>");
+            $('#volume-slider').slider({
                 orientation: "vertical",
                 min: 0,
                 max: 100,
@@ -73,7 +74,7 @@ var initWidget = function(w, i) {
                 slide: function(event, ui) {
                   setVolume((ui.value) / 100, widget);
                 }
-              });
+            });
         });
         widget.bind(SC.Widget.Events.PAUSE, function() {
             $(w).removeClass('current');
