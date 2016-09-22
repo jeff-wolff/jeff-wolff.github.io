@@ -121,7 +121,7 @@ $(function(){
         SC.connect().then(function() {
             $("#login").hide();
             return SC.get('/me/activities', {
-                limit: length + 13
+                limit: length
             });
         }).then(function(user) {
             var og_tracks = 0;
