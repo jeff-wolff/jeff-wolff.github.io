@@ -59,6 +59,7 @@ var volumeNum = .3;
 var timeSince=function(o){"object"!=typeof o&&(o=new Date(o));var e,t=Math.floor((new Date-o)/1e3),a=Math.floor(t/31536e3);return a>=1?e="year":(a=Math.floor(t/2592e3),a>=1?e="month":(a=Math.floor(t/86400),a>=1?e="day":(a=Math.floor(t/3600),a>=1?e="hour":(a=Math.floor(t/60),a>=1?e="minute":(a=t,e="second"))))),(a>1||0===a)&&(e+="s"),a+" "+e};
 var initWidget = function(w, i) {
     var widget = SC.Widget(w);
+    var next;
     var last;
     // Events.READY is dispatched when the widget has been loaded
     widget.bind(SC.Widget.Events.READY, function() {
@@ -89,8 +90,6 @@ var initWidget = function(w, i) {
         widget.bind(SC.Widget.Events.FINISH, function() {
             widget.getSounds(function(sounds){
                 console.log('length: '+sounds.length);
-                // var next = SC.Widget($('#frame0')[0]);
-                var next;
                 var curr_index;
                   
                 if (sounds.length > 1) {
