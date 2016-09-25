@@ -163,8 +163,6 @@ $(function(){
             });
         });
         $(window).scroll(function(event){
-            console.log(window.scrollY);
-            console.log(event);
             $("#result iframe.lazy-loaded").each(function() {
                 initWidget(this);
             });
