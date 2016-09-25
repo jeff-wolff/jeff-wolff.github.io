@@ -91,6 +91,7 @@ var initWidget = function(w) {
                 if (playlist_length > 1) {
                     widget.getCurrentSoundIndex(function(index){
                         curr_index = index + 1;
+                        console.log(curr_index);
                         if (last) {
                             next.play();
                             last = false;
@@ -147,7 +148,7 @@ $(function(){
             for (var i = 0; i < 30; i++) {
                 var date = new Date(date_list[i]);
                 $('<div class="track"><h4>'+timeSince(date)+' ago</h4>').appendTo("#result");
-                if (i <= 4) {
+                if (i <= 2) {
                     $('<iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" />').appendTo('#result');
                 } else {
                     $('<iframe id="frame'+i+'" data-src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" />').appendTo('#result');
