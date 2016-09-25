@@ -149,16 +149,13 @@ $(function(){
                 }
                 $('</div>').appendTo('#result');
             }
-            $("#result iframe").lazyLoadXT();
             $("#result iframe").each(function(i) {
                 initWidget(this, i);
             });
-        });
-    });
-    $('#result iframe').on('lazyshow', function(event) {
-        console.log(event);
-        $(this).each(function(i) {
-            initWidget(this, i);
+            $("#result iframe").lazyLoadXT();
+            $.extend($.lazyLoadXT, {
+              onshow: initWidget($('#result iframe[src]'));
+            });
         });
     });
 });
