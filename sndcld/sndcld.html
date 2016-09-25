@@ -64,10 +64,6 @@ var initWidget = function(w, i) {
     // Events.READY is dispatched when the widget has been loaded
     widget.bind(SC.Widget.Events.READY, function() {
         // First Widget
-        if (i === 0) {
-            // widget.setVolume(volumeNum);
-            widget.play();
-        }
         // $(w).after("<div class='volume-slider'></div>");
         // $('.volume-slider').slider({
         //     orientation: "vertical",
@@ -88,28 +84,24 @@ var initWidget = function(w, i) {
            
         });
         widget.bind(SC.Widget.Events.FINISH, function() {
+            console.log(widget.getSounds);
             widget.getSounds(function(sounds){
                 console.log('length: '+sounds.length);
                 var curr_index;
-                  
-                if (sounds.length > 1) {
-                    widget.getCurrentSoundIndex(function(index){
-                        curr_index = index + 1;
-                        if (last) {
-                            next.play();
-                            last = false;
-                        } else if (curr_index == sounds.length) {
-                            last = true;
-                            next = SC.Widget(($(w).next().next()[0]));
-                        } 
-                    });
-                } else {
-                    next = SC.Widget(($(w).next().next()[0]));
-                    next.play();
-                }      
+                widget.getCurrentSoundIndex(function(index){
+                    curr_index = index + 1;
+                    if (last) {
+                        next.play();
+                        last = false;
+                    } else if (curr_index == sounds.length) {
+                        last = true;
+                        next = SC.Widget(($(w).next().next()[0]));
+                    } 
+                });
             });
             // next.setVolume(volumeNum);
-            
+            // next = SC.Widget(($(w).next().next()[0]));
+            // next.play();
         });
     });          
 }
