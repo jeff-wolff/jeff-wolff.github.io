@@ -156,6 +156,7 @@ $(function(){
             $("#result iframe").each(function() {
                 initWidget(this);
             });
+            $("#result iframe").lazyLoadXT();
             $.extend($.lazyLoadXT, {
               onload: initWidget($('#result iframe'))
             });
