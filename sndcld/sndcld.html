@@ -88,17 +88,23 @@ var initWidget = function(w, i) {
             widget.getSounds(function(sounds){
                 console.log(sounds.length);
                 // var next = SC.Widget($('#frame0')[0]);
+                var next;
                 if (sounds.length > 1) {
-                    var next = widget.next();
                     widget.getCurrentSoundIndex(function(index){
-                        console.log(index);
+                        if (index == sounds.length-1) {
+                            var next = SC.Widget(($(w).next().next()[0]));
+                            next.play();
+                        } else {
+                            widget.next();
+                        }
                     });
                 } else {
                     var next = SC.Widget(($(w).next().next()[0]));
-                }
+                    next.play();
+                }      
             });
             // next.setVolume(volumeNum);
-            next.play();
+            
         });
     });          
 }
