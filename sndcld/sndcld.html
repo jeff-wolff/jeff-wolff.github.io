@@ -102,21 +102,34 @@ var initWidget = function(w) {
             widget.getSounds(function(sounds){
                 var playlist_length = sounds.length;
                 var curr_index;
+                var next_widget = $(w).next().next()[0];
+
                 if (playlist_length > 1) {
                     widget.getCurrentSoundIndex(function(index){
                         curr_index = index + 1;
                         if (last) {
-                            next.play();
-                            last = false;
+                            $('html, body').animate({
+                                scrollTop: $(next_widget).offset().top
+                            }, 1000);
+                            setTimeout(function(){
+                                next.play();
+                                last = false;
+                            },1500);
                         } else if (curr_index == sounds.length) {
                             last = true;
-                            next = SC.Widget(($(w).next().next()[0]));
+                            next = SC.Widget(next_widget);
                         } 
                     });
                 } else {
                     var next_widget = $(w).next().next()[0];
                     next = SC.Widget(next_widget);
-                    next.play();  
+                    $('html, body').animate({
+                        scrollTop: $(next_widget).offset().top
+                    }, 1000);
+                    setTimeout(function(){
+                        next.play();
+                        last = false;
+                    },1500);
                 }
             });
    
