@@ -153,11 +153,10 @@ $(function(){
             $("#result iframe").each(function(i) {
                 initWidget(this, i);
             });
-            $( window ).scroll(function() {
-                $("#result iframe").each(function(i) {
-                    initWidget(this, i);
-                });
+            $.extend($.lazyLoadXT, {
+              onload: initWidget(this);
             });
+            console.log('test');
         });
 
     });
