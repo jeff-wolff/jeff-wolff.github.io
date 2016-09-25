@@ -157,11 +157,13 @@ $(function(){
             $("#result iframe").each(function() {
                 initWidget(this);
             });
-            $.extend($.lazyLoadXT, {
-              onload: console.log('hello')
+        });
+        $(window).scroll(function(){
+            console.log('test');
+            $("#result iframe.lazy-loaded").each(function() {
+                initWidget(this);
             });
         });
-
     });
 });
 </script>
