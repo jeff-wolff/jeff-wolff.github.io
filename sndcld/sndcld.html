@@ -153,14 +153,15 @@ $(function(){
                 }
                 $('</div>').appendTo('#result');
             }
+            $("#result iframe").lazyLoadXT();
             $("#result iframe").each(function() {
                 initWidget(this);
             });
+            $.extend($.lazyLoadXT, {
+              onload: initWidget($('#result iframe'))
+            });
         });
-        $("#result iframe").lazyLoadXT();
-        $.extend($.lazyLoadXT, {
-          onload: initWidget($('#result iframe'))
-        });
+
     });
 });
 </script>
