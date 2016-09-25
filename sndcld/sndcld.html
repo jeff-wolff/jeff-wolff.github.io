@@ -79,11 +79,6 @@ var initWidget = function(w) {
         widget.bind(SC.Widget.Events.PLAY, function() {
             // widget.setVolume(volumeNum);
             console.log('play');
-        });
-        widget.bind(SC.Widget.Events.PAUSE, function() {
-           
-        });
-        widget.bind(SC.Widget.Events.FINISH, function() {
             widget.getSounds(function(sounds){
                 console.log('length: '+sounds.length);
                 var playlist_length = sounds.length;
@@ -92,6 +87,24 @@ var initWidget = function(w) {
                     widget.getCurrentSoundIndex(function(index){
                         curr_index = index + 1;
                         console.log(curr_index);
+                        if (curr_index == sounds.length) {
+                            last = true;
+                            next = SC.Widget(($(w).next().next()[0]));
+                        } 
+                    });
+                }
+            });
+        });
+        widget.bind(SC.Widget.Events.PAUSE, function() {
+           
+        });
+        widget.bind(SC.Widget.Events.FINISH, function() {
+            widget.getSounds(function(sounds){
+                var playlist_length = sounds.length;
+                var curr_index;
+                if (playlist_length > 1) {
+                    widget.getCurrentSoundIndex(function(index){
+                        curr_index = index + 1;
                         if (last) {
                             next.play();
                             last = false;
