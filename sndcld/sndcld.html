@@ -156,9 +156,8 @@ $(function(){
             $("#result iframe").each(function() {
                 initWidget(this);
             });
-            $("#result iframe").lazyLoadXT();
             $.extend($.lazyLoadXT, {
-              onshow: initWidget($('#result iframe'))
+              onload: initWidget($('#result iframe'))
             });
         });
     });
