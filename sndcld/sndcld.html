@@ -82,7 +82,9 @@ var initWidget = function(w, i) {
             // widget.setVolume(volumeNum);
         });
         widget.bind(SC.Widget.Events.PAUSE, function() {
-            console.log(getSounds(widget));
+            widget.getSounds(function(sounds){
+                console.log(sounds.length);
+            };)
         });
         widget.bind(SC.Widget.Events.FINISH, function() {
 
