@@ -187,6 +187,9 @@ $(function(){
             });
         });
     });
+    $(window).bind("mousewheel", function() {
+        $("html, body").stop();
+    });
 });
 </script>
 
