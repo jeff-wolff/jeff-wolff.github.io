@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/black-tie/jquery-ui.css">
 <style>
     .wrap {
-        max-width: 1280px;
+        max-width: 500px;
         width: 80%;
         margin: 0 auto;
     }
@@ -21,7 +21,7 @@
     iframe {
         background-color: #fafafa;
         width: 98%;
-        min-height: 160px;
+        min-height: 465px;
         border: none;
         margin-bottom: 30px;
         transition: min-height 300ms ease-in-out;
@@ -134,10 +134,11 @@ $(function(){
                 var date = new Date(date_list[i]);
                 $('<div class="track"><h4>'+timeSince(date)+' ago</h4>').appendTo("#result");
                 if (i <= 4) {
-                    $('<iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" /></div>').appendTo('#result');
+                    $('<iframe id="frame'+i+'" src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" />').appendTo('#result');
                 } else {
-                    $('<iframe id="frame'+i+'" data-src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" /></div>').appendTo('#result');
+                    $('<iframe id="frame'+i+'" data-src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" />').appendTo('#result');
                 }
+                $('</div>').appendTo('#result');
             }
             $("#result iframe").lazyLoadXT();
             $("#result iframe").each(function(i) {
