@@ -158,8 +158,9 @@ $(function(){
                 initWidget(this);
             });
         });
-        $(window).scroll(function(){
-            console.log('test');
+        $(window).scroll(function(event){
+            console.log(window);
+            console.log(event);
             $("#result iframe.lazy-loaded").each(function() {
                 initWidget(this);
             });
