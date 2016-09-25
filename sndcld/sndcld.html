@@ -92,17 +92,17 @@ var initWidget = function(w, i) {
                 var next;
                 if (sounds.length > 1) {
                     widget.getCurrentSoundIndex(function(index){
-                        // var curr_index = index + 1;
-                        // if (curr_index > sounds.length) {
-                        //     console.log(curr_index);
-                        //     var next = SC.Widget(($(w).next().next()[0]));
-                        //     next.play();
-                        // } 
-                        console.log(index+1);
+                        var curr_index = index + 1;
+                        if (curr_index > sounds.length) {
+                            next.play();
+                        } else if (curr_index == sounds.length) {
+                            curr_index = curr_index + 1;
+                            console.log(curr_index);
+                            next = SC.Widget(($(w).next().next()[0]));
+                        } 
                     });
-
                 } else {
-                    var next = SC.Widget(($(w).next().next()[0]));
+                    next = SC.Widget(($(w).next().next()[0]));
                     next.play();
                 }      
             });
