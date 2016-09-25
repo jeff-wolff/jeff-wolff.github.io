@@ -100,7 +100,7 @@ var initWidget = function(w) {
         });
         widget.bind(SC.Widget.Events.FINISH, function() {
         
-            var next_widget = $(w).next().next()[0];
+            var next_widget = widget.next().next()[0];
             
             widget.getSounds(function(sounds){
                 var playlist_length = sounds.length;
