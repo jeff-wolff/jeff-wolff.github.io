@@ -83,7 +83,7 @@ var initWidget = function(w, i) {
 
         });
         widget.bind(SC.Widget.Events.FINISH, function() {
-            
+
             try {
                 var next = SC.Widget(($(w).next().next()[0]));
             }
@@ -117,7 +117,7 @@ $(function(){
             var og_tracks = 0;
             for (var i = user.collection.length - 1; i >= 0; i--) {
                 if (user.collection[i].origin !== null) {
-                    if (user.collection[i].type === "track")
+                    if (user.collection[i].type === "track") {
                         song_list.push(user.collection[i].origin.uri);
                         date_list.push(user.collection[i].created_at);
                         og_tracks = og_tracks + 1;
