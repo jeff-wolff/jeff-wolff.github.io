@@ -82,15 +82,16 @@ var initWidget = function(w, i) {
             // widget.setVolume(volumeNum);
         });
         widget.bind(SC.Widget.Events.PAUSE, function() {
-
+            console.log($(w).getSounds());
         });
         widget.bind(SC.Widget.Events.FINISH, function() {
 
             try {
-                var next = SC.Widget(($(w).next().next()[0]));
+                var next_sound = SC.Widget(($(w).next().next()[0]));
+
             }
             catch (e) {
-                var next = SC.Widget($('#frame0')[0]);
+                // var next = SC.Widget($('#frame0')[0]);
             }
             // next.setVolume(volumeNum);
             next.play();
