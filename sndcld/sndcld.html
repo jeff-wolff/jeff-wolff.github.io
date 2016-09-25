@@ -153,7 +153,11 @@ $(function(){
             $("#result iframe").each(function(i) {
                 initWidget(this, i);
             });
-            
+            $( window ).scroll(function() {
+                $("#result iframe").each(function(i) {
+                    initWidget(this, i);
+                });
+            }
         });
 
     });
