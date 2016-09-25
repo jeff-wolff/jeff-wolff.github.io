@@ -85,6 +85,7 @@ var initWidget = function(w, i) {
         });
         widget.bind(SC.Widget.Events.FINISH, function() {
             console.log(widget.getSounds);
+            if (wiget.getSounds) {
             widget.getSounds(function(sounds){
                 console.log('length: '+sounds.length);
                 var curr_index;
@@ -99,9 +100,11 @@ var initWidget = function(w, i) {
                     } 
                 });
             });
+            } else {
             // next.setVolume(volumeNum);
-            // next = SC.Widget(($(w).next().next()[0]));
-            // next.play();
+                next = SC.Widget(($(w).next().next()[0]));
+                next.play();     
+            }
         });
     });          
 }
