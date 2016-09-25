@@ -91,15 +91,16 @@ var initWidget = function(w, i) {
                 // var next = SC.Widget($('#frame0')[0]);
                 var next;
                 if (sounds.length > 1) {
-                    // widget.getCurrentSoundIndex(function(index){
-                    //     var curr_index = index + 1;
-                    //     if (curr_index > sounds.length) {
-                    //         console.log(curr_index);
-                    //         var next = SC.Widget(($(w).next().next()[0]));
-                    //         next.play();
-                    //     } 
-                    // });
-                    console.log(curr_index);
+                    widget.getCurrentSoundIndex(function(index){
+                        // var curr_index = index + 1;
+                        // if (curr_index > sounds.length) {
+                        //     console.log(curr_index);
+                        //     var next = SC.Widget(($(w).next().next()[0]));
+                        //     next.play();
+                        // } 
+                        console.log(index);
+                    });
+
                 } else {
                     var next = SC.Widget(($(w).next().next()[0]));
                     next.play();
