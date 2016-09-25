@@ -101,11 +101,8 @@ var initWidget = function(w) {
                     });
                 } else {
                     var next_widget = $(w).next().next()[0];
-                    $("html, body").animate({ scrollTop: $(next_widget).offset().top}, 250);
-                    setTimeout(function(){
-                        next = SC.Widget(next_widget);
-                        next.play();  
-                    },250);
+                    next = SC.Widget(next_widget);
+                    next.play();  
                 }
             });
    
