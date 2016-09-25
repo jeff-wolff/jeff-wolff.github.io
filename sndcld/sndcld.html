@@ -91,8 +91,9 @@ var initWidget = function(w, i) {
                 var next;
                 if (sounds.length > 1) {
                     widget.getCurrentSoundIndex(function(index){
-                        if (index == sounds.length-1) {
-                            console.log(index);
+                        var curr_index = index + 1;
+                        if (curr_index == sounds.length) {
+                            console.log(curr_index);
                             var next = SC.Widget(($(w).next().next()[0]));
                             next.play();
                         } 
