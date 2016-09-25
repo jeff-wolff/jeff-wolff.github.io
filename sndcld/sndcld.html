@@ -113,6 +113,8 @@ $(function(){
             $("#login").hide();
             return SC.get('/me/activities', {
                 limit: length
+            }).catch(function(error) {
+                alert('Error: ' + error.message);
             });
         }).then(function(user) {
             var og_tracks = 0;
