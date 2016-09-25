@@ -82,19 +82,21 @@ var initWidget = function(w, i) {
             // widget.setVolume(volumeNum);
         });
         widget.bind(SC.Widget.Events.PAUSE, function() {
-            widget.getSounds(function(sounds){
-                console.log(sounds.length);
-            });
+           
         });
         widget.bind(SC.Widget.Events.FINISH, function() {
-
-            try {
-                var next_sound = SC.Widget(($(w).next().next()[0]));
-
-            }
-            catch (e) {
+            widget.getSounds(function(sounds){
+                console.log(sounds.length);
                 // var next = SC.Widget($('#frame0')[0]);
-            }
+                if (sounds.length > 1) {
+                    var next = widget.next();
+                    widget.getCurrentSoundIndex(function(index){
+                        console.log(index);
+                    });
+                } else {
+                    var next = SC.Widget(($(w).next().next()[0]));
+                }
+            });
             // next.setVolume(volumeNum);
             next.play();
         });
