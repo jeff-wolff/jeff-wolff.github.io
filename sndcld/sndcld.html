@@ -164,6 +164,7 @@ $(function(){
         });
         $(window).scroll(function(event){
             $("#result iframe.lazy-loaded").each(function() {
+                console.log('init');
                 initWidget(this);
             });
         });
