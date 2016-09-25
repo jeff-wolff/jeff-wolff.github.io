@@ -103,7 +103,6 @@ function setVolume(v, w) {
 }
 
 $(function(){
-    $(window).lazyLoadXT();
     // initiate auth popup
     $("#login").on("click", function(event) {
         event.preventDefault();
@@ -140,6 +139,7 @@ $(function(){
                     $('<iframe id="frame'+i+'" data-src="https://w.soundcloud.com/player/?url='+ encodeURI(song_list[i]) +'&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false" /></div>').appendTo('#result');
                 }
             }
+            $("#result iframe").lazyLoadXT();
             $("#result iframe").each(function(i) {
                 initWidget(this, i);
             });
