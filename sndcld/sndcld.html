@@ -121,7 +121,7 @@ $(function(){
             for (var i = user.collection.length - 1; i >= 0; i--) {
                 if (user.collection[i].origin !== null) {
                     if (user.collection[i].type === "track" || user.collection[i].type === "playlist") {
-                        song_list.push(user.collection[i].origin.permalink_url);
+                        song_list.push(user.collection[i].origin.tracks_uri);
                         date_list.push(user.collection[i].created_at);
                         og_tracks = og_tracks + 1;
                     }
