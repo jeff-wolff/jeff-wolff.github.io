@@ -96,7 +96,7 @@ var initWidget = function(w, i) {
                 if (sounds.length > 1) {
                     widget.getCurrentSoundIndex(function(index){
                         curr_index = index + 1;
-                        if (curr_index > sounds.length) {
+                        if (last) {
                             next.play();
                             last = false;
                         } else if (curr_index == sounds.length) {
