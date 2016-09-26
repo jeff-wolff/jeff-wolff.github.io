@@ -182,13 +182,11 @@ $(function(){
             });
         });
         $(window).scroll(function(event){
+            $("html, body").stop();
             $("#result iframe.lazy-loaded").each(function() {
                 initWidget(this);
             });
         });
-    });
-    $(window).bind("mousewheel", function() {
-        $("html, body").stop();
     });
 });
 </script>
