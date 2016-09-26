@@ -79,6 +79,7 @@ var initWidget = function(w) {
         widget.bind(SC.Widget.Events.PLAY, function() {
             // widget.setVolume(volumeNum);
             console.log('play');
+            $('html, body').stop();
             $('html, body').animate({
                     scrollTop: $(w).offset().top
             }, 1000);
@@ -180,9 +181,6 @@ $(function(){
             $("#result iframe.lazy-loaded").each(function() {
                 initWidget(this);
             });
-        });
-        $(window).bind("mousewheel", function() {
-            $("html, body").stop();
         });
     });
 
