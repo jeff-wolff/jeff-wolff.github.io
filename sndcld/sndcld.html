@@ -80,7 +80,7 @@ var initWidget = function(w) {
             // widget.setVolume(volumeNum);
             console.log('play');
             $('html, body').animate({
-                    scrollTop: window.scrollY + 600
+                    scrollTop: $(widget).offset().top
             }, 1000);
             setTimeout(function(){
                 widget.getSounds(function(sounds){
