@@ -81,7 +81,7 @@ var initWidget = function(w) {
             console.log('play');
             $('html, body').stop();
             $('html, body').animate({
-                    scrollTop: $(w).offset().top
+                    scrollTop: $(w).offset().top - 300
             }, 1000);
             setTimeout(function(){
                 widget.getSounds(function(sounds){
