@@ -79,21 +79,26 @@ var initWidget = function(w) {
         widget.bind(SC.Widget.Events.PLAY, function() {
             // widget.setVolume(volumeNum);
             console.log('play');
-            widget.getSounds(function(sounds){
-                console.log('length: '+sounds.length);
-                var playlist_length = sounds.length;
-                var curr_index;
-                if (playlist_length > 1) {
-                    widget.getCurrentSoundIndex(function(index){
-                        curr_index = index + 1;
-                        console.log(curr_index);
-                        if (curr_index == sounds.length) {
-                            last = true;
-                            next = SC.Widget(($(w).next().next()[0]));
-                        } 
-                    });
-                }
-            });
+            $('html, body').animate({
+                    scrollTop: window.scrollY + 600
+            }, 1000);
+            setTimeout(function(){
+                widget.getSounds(function(sounds){
+                    console.log('length: '+sounds.length);
+                    var playlist_length = sounds.length;
+                    var curr_index;
+                    if (playlist_length > 1) {
+                        widget.getCurrentSoundIndex(function(index){
+                            curr_index = index + 1;
+                            console.log(curr_index);
+                            if (curr_index == sounds.length) {
+                                last = true;
+                                next = SC.Widget(($(w).next().next()[0]));
+                            } 
+                        });
+                    }
+                });
+            },1050);
         });
         widget.bind(SC.Widget.Events.PAUSE, function() {
            
@@ -110,28 +115,18 @@ var initWidget = function(w) {
                     widget.getCurrentSoundIndex(function(index){
                         curr_index = index + 1;
                         if (last) {
-                            $('html, body').animate({
-                                    scrollTop: window.scrollY + 600
-                            }, 2000);
-                            setTimeout(function(){
-                                next.play();
-                                last = false;
-                            }, 2250);
+                            next.play();
+                            last = false;
                         } else if (curr_index == sounds.length) {
                             last = true;
                             next = SC.Widget(next_widget);
                         } 
                     });
                 } else {
-                    $('html, body').animate({
-                            scrollTop: window.scrollY + 600
-                    }, 2000);
-                    setTimeout(function(){
-                        var next_widget = $(w).next().next()[0];
-                        next = SC.Widget(next_widget);
-                        next.play();
-                        last = false;
-                    }, 2250);
+                    var next_widget = $(w).next().next()[0];
+                    next = SC.Widget(next_widget);
+                    next.play();
+                    last = false;
                 }
             });
         });
