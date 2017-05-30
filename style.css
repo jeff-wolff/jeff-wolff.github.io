@@ -73,7 +73,7 @@ ul {
     list-style-type: circle;
 }
 ol {
-    padding: 0;
+    padding: 0 0 0 2rem;
     margin-top: 4.25rem;
 }
 ol > li {
