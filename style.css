@@ -1,108 +1,121 @@
-.wf-loading {
-		visibility: hidden;
-	}
-	html, body {
-		font-family: "source-sans-pro", sans-serif;
-		box-sizing: border-box;
-		font-size: 16px;
-		line-height: 1.8;
-	}
-	a {
-		color: red;
-	}
-	a:hover {
-		color: darkred;
-	}
-	h1,h2,h3,span.logo {
-		text-align: center;
-	}
-	h1 {
-		font-size: 72px;
-	}
-	h2 {
-		font-size: 48px;
-	}
-	@media (max-width: 30em) {
-		h1 {
-			font-size: 2.5em;
-		}
-		h2 {
-			font-size: 2em;
-		}
-	}
-	*, *:before, *:after {
-		box-sizing: inherit;
-	}
-	body {
-		max-width: 640px;
-		margin: 0 auto;
-		padding: 20px;
-		padding: 2rem 1rem 1rem;
-	}
-	@media (max-width: 30em) {
-		body {
-			padding: 1rem;
-		}
-	}
-	img {
-		width: 100%;
-	}
-	h1,h2,h3 {
-		text-rendering: optimizeLegibility;
-		font-family: "adobe-caslon-pro", "Arial",  "Helvetica", sans-serif;
-		font-weight: bold;
-		line-height: 1.2;
-		color: #111111;
-		margin: 3rem 0 2rem;
-	}
-	p,mark {
-		color: #444444;
-	}
-	strong {
-		color: #111111;
-	}
-	a {
-		text-decoration: none;
-	}
-	ul {
-		list-style-type: circle;
-	}
-	ol {
-		padding: 0;
-	}
-	ol > li {
-		margin-bottom: 2rem;
-	}
-	small {
-		font-size: 14px;
-		font-size: 0.7rem;
-	}
-	span.logo {
-		font-family: "adobe-caslon-pro", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
-	    letter-spacing: 0.01em;
-	    font-size: 16px;
-	    line-height: 1;
-	    display: block;
-	}
-	span:hover span {
-		color: #777;
-		letter-spacing: -3px;
-		opacity: 1;
-		padding-right: 4px;
-		padding-right: 0.2rem;
-	}
-	fieldset {
-		background-color: rgba(255,255,0,.05);
-		border: 1px solid #ddd;
-		text-align: center;
-	}
-	legend {
-		font-size: 14px;
-		font-size: 0.7rem;
-		background-color: rgba(255,255,0,.05);
-    	box-shadow: 0 0 10px 1px rgba(255,255,0,.05);
-    	padding: 0 5px;
-	}
+@import url('https://fonts.googleapis.com/css?family=Cousine:400,700|Playfair+Display:800,800i');
 
-  
-
+html, body {
+    font-family: "Cousine", monospace;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.8;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: #000;
+    padding: 10px;
+    margin: 0;
+}
+@media (min-width: 640px) {
+    body {
+        padding: 20px;
+    }
+}
+a {
+    color: red;
+}
+a:hover {
+    color: darkred;
+}
+h1, h2, h3, span.logo {
+    text-align: center;
+}
+h1 {
+    font-size: 72px;
+}
+h2 {
+    font-size: 48px;
+}
+@media (max-width:30em) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+}
+img {
+    width: 100%;
+}
+h1, h2, h3 {
+    text-rendering: optimizeLegibility;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #111111;
+    font-feature-settings:"liga" 0;
+    margin: 4.25rem auto 1.25rem;
+    letter-spacing: -0.025em;
+}
+p, mark, ul, ol, h1, h2, h3, fieldset {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p, mark {
+    color: #444444;
+}
+strong {
+    color: #111111;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: circle;
+}
+ol {
+    padding: 0;
+    margin-top: 4.25rem;
+}
+ol > li {
+    margin-bottom: 3.25rem;
+}
+small {
+    font-size: 14px;
+    font-size: 0.7rem;
+}
+.content {
+    min-height: calc(100vh - 40px);
+    padding: 30px;
+    background-color: #fff;
+}
+@media (min-width: 640px) {
+    .content {
+        padding: 40px;
+    }
+}
+span.logo {
+    font-family: "Cousine", monospace;
+    letter-spacing: 0.01em;
+    font-size: 16px;
+    line-height: 1;
+    display: block;
+}
+span:hover span {
+    color: #777;
+    letter-spacing: -3px;
+    opacity: 1;
+    padding-right: 4px;
+    padding-right: 0.2rem;
+}
+fieldset {
+    background-color: rgba(255, 255, 0, .05);
+    border: 1px solid #ddd;
+    text-align: center;
+}
+legend {
+    font-size: 14px;
+    font-size: 0.7rem;
+    background-color: rgba(255, 255, 0, .05);
+    box-shadow: 0 0 10px 1px rgba(255, 255, 0, .05);
+    padding: 0 5px;
+}
