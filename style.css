@@ -46,7 +46,7 @@ h1, h2, h3 {
     font-feature-settings:"liga" 0;
     margin: 4.25rem auto 1.25rem;
     /*letter-spacing: -0.025em;*/
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 @media (min-width:640px) {
     h1 {
