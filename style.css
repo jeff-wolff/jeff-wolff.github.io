@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cousine:400,700|Playfair+Display:800,800i');
+@import url('https://fonts.googleapis.com/css?family=Cousine:400,700|Roboto+Slab:700');
 
 html, body {
     font-family: "Cousine", monospace;
@@ -19,7 +19,7 @@ body {
 @media (min-width: 640px) {
     body {
         padding: 20px;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 a {
@@ -28,7 +28,7 @@ a {
 a:hover {
     color: darkred;
 }
-h1, h2, h3, span.logo {
+h1, span.logo {
     text-align: center;
 }
 h1 {
@@ -37,29 +37,34 @@ h1 {
 h2 {
     font-size: 2em;
 }
-@media (min-width:640px) {
-    h1 {
-        font-size: 72px;
-    }
-    h2 {
-        font-size: 48px;
-    }
-}
-img {
-    width: 100%;
-}
 h1, h2, h3 {
     text-rendering: optimizeLegibility;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
     line-height: 1.1;
     color: #111111;
     font-feature-settings:"liga" 0;
     margin: 4.25rem auto 1.25rem;
-    letter-spacing: -0.025em;
+    /*letter-spacing: -0.025em;*/
+    text-transform: uppercase;
 }
-p, mark, ul, ol, h1, h2, h3, fieldset {
-    max-width: 720px;
+@media (min-width:640px) {
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 28px;
+        margin-top: 8rem;
+    }
+}
+
+
+img {
+    width: 100%;
+}
+
+p, mark, ul, ol {
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -76,7 +81,7 @@ ul {
     list-style-type: circle;
 }
 ol {
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 1.5rem;
     margin-top: 4.25rem;
 }
 ol > li {
@@ -88,8 +93,16 @@ small {
 }
 .content {
     min-height: calc(100vh - 40px);
-    padding: 30px;
+    padding: 20px;
     background-color: #fff;
+}
+.footer {
+    display: inline-block;
+    padding-top: 1rem;
+    color: #fff;
+}
+.notfound.content > p {
+    text-align: center;
 }
 @media (min-width: 640px) {
     .content {
@@ -100,8 +113,10 @@ span.logo {
     font-family: "Cousine", monospace;
     letter-spacing: 0.01em;
     font-size: 16px;
+    font-weight: bold;
     line-height: 1;
     display: block;
+    color: #999;
 }
 span:hover span {
     color: #777;
