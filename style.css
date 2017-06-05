@@ -79,13 +79,10 @@ a {
 }
 ul {
     list-style-type: circle;
+    padding-left: 1.1rem;
 }
-ol {
-    padding: 0 0 0 1.5rem;
-    margin-top: 4.25rem;
-}
-ol > li {
-    margin-bottom: 3.25rem;
+ul > li {
+    margin-bottom: 1rem;
 }
 small {
     font-size: 14px;
@@ -103,6 +100,9 @@ small {
 }
 .notfound.content > p {
     text-align: center;
+}
+.archive.content > ul > li {
+    margin-bottom: 2.25rem;
 }
 @media (min-width: 640px) {
     .content {
