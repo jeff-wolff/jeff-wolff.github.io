@@ -44,11 +44,8 @@ h1, h2, h3 {
     color: #111111;
     font-feature-settings:"liga" 0;
     margin: 40px auto 1.25rem;
-    /*letter-spacing: -0.025em;*/
-    /*text-transform: uppercase;*/
 }
 h1 > a {
-  display: block;
   color: #111;
 }
 @media (min-width:640px) {
@@ -61,8 +58,6 @@ h1 > a {
         margin-top: 80px;
     }
 }
-
-
 img {
     width: 100%;
 }
@@ -113,28 +108,4 @@ small {
     .content {
         padding: 60px;
     }
-}
-span.logo {
-    font-family: "Cousine", monospace;
-    letter-spacing: 0.01em;
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 1;
-    display: block;
-    color: #999;
-}
-span.logo:hover {
-    color: #777;
-}
-fieldset {
-    background-color: rgba(255, 255, 0, .05);
-    border: 1px solid #ddd;
-    text-align: center;
-}
-legend {
-    font-size: 14px;
-    font-size: 0.7rem;
-    background-color: rgba(255, 255, 0, .05);
-    box-shadow: 0 0 10px 1px rgba(255, 255, 0, .05);
-    padding: 0 5px;
 }
