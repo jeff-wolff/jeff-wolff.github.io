@@ -48,6 +48,7 @@ h1, h2, h3 {
     /*text-transform: uppercase;*/
 }
 h1 > a {
+  display: block;
   color: #111;
 }
 @media (min-width:640px) {
