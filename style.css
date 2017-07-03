@@ -80,9 +80,6 @@ ul {
     list-style-type: circle;
     padding-left: 1.1rem;
 }
-ul > li {
-    margin-bottom: 1rem;
-}
 small {
     font-size: 14px;
     font-size: 0.7rem;
