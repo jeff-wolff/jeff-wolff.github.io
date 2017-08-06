@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,500,500i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,500,500i,700,700i" rel="stylesheet">
   <title>Document</title>
   <style>
     :root {
-      --hue: 1;
+      --hue: 197;
     }
     body {
-      transition: background-color 1s ease;
-      background-color: hsl(var(--hue),95%,20%);
-      color: rgba(255,255,255,0.75);
+      transition: background-color 150ms ease, color 150ms ease;
+      background-color: hsl(var(--hue),10%,87%);
+      color: hsla(calc(var(--hue)),100%,27%,1);
         font-family: 'Roboto Mono';
         font-size: calc(14px + .625vw);
         font-variant-ligatures: none;
@@ -23,10 +23,18 @@
         margin: 0;
     }
     strong {
-      font-weight: 500;
+      font-weight: 700;
+    }
+    a {
+      font-weight: 700;
+      color: hsla(calc(var(--hue)),100%,30%,1);
+    }
+    a:hover {
+      text-decoration: none;
     }
     h1,h2 {
-      color: rgba(255,255,255,0.95);
+      transition: color 150ms ease;
+      color: hsla(calc(var(--hue)),100%,27%,1);
     }
     h1 {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -69,30 +77,10 @@
   </style>
 </head>
 <body>
-<script>
-let hue = 0;
-setInterval(function(){
-  document.documentElement.style.setProperty('--hue', Math.floor(Math.random() * 350) + 0);
-},3000);
-// window.addEventListener('scroll', function(e) {
-//   const scrollY = window.scrollY;
-//   document.documentElement.style.setProperty('--hue', 0);
-//    if (scrollY > 1000) {
-//       document.documentElement.style.setProperty('--hue', 25);
-//    } 
-//    if (scrollY > 2000) {
-//       document.documentElement.style.setProperty('--hue', 40);
-//    }
-//    if (scrollY > 3000) {
-//       document.documentElement.style.setProperty('--hue', 80);
-//    }
-//   console.log( scrollY);
-   
-// });
-</script>
+
 <h2 class="liga">jeff wolff</h2>
   <h1 class="liga">The quick brown fox jumps over the lazy dog</h1>
- <p>Lorem ipsum dolor sit amet, <strong><i>consectetur adipiscing</i></strong> elit. Curabitur auctor consectetur massa, nec consequat dui efficitur ut. Nulla vulputate malesuada nunc, at semper enim auctor a. Aliquam finibus purus lectus, in varius arcu maximus ac. Mauris vestibulum orci nec sodales elementum. Proin pretium libero vel molestie viverra. Vivamus ut dictum nunc, vel pretium diam. Sed pretium mi libero. Quisque convallis eget quam quis dapibus. Suspendisse potenti. Sed vitae felis id elit laoreet sollicitudin sit amet non nisi. Vivamus non ex vitae felis porttitor commodo ut id felis. Ut a nisl fringilla eros pellentesque vestibulum. Nullam et lectus sagittis, lacinia orci sed, ullamcorper libero. Etiam imperdiet dignissim nisl, id scelerisque ipsum ultrices eget. Praesent velit ipsum, congue congue tellus ut, sagittis facilisis lacus. Vestibulum at tortor ut est dignissim sagittis sit amet at ante.</p>
+ <p><a href="#" id="bitch">Lorem ipsum dolor</a> sit amet, <strong><i>consectetur adipiscing</i></strong> elit. Curabitur auctor consectetur massa, nec consequat dui efficitur ut. Nulla vulputate malesuada nunc, at semper enim auctor a. Aliquam finibus purus lectus, in varius arcu maximus ac. Mauris vestibulum orci nec sodales elementum. Proin pretium libero vel molestie viverra. Vivamus ut dictum nunc, vel pretium diam. Sed pretium mi libero. Quisque convallis eget quam quis dapibus. Suspendisse potenti. Sed vitae felis id elit laoreet sollicitudin sit amet non nisi. Vivamus non ex vitae felis porttitor commodo ut id felis. Ut a nisl fringilla eros pellentesque vestibulum. Nullam et lectus sagittis, lacinia orci sed, ullamcorper libero. Etiam imperdiet dignissim nisl, id scelerisque ipsum ultrices eget. Praesent velit ipsum, congue congue tellus ut, sagittis facilisis lacus. Vestibulum at tortor ut est dignissim sagittis sit amet at ante.</p>
 
  <p>Curabitur ornare ultricies ante, vitae fermentum sem accumsan nec. Donec cursus velit et nisl interdum, id fringilla nibh ultrices. Nulla in bibendum urna. Nunc sit amet faucibus sapien. Mauris non nisl vel nibh iaculis lacinia at a tellus. Maecenas efficitur, massa non efficitur accumsan, erat mauris hendrerit nunc, sit amet mattis risus risus ultricies quam. Mauris id malesuada neque. Praesent et ante dolor. Nullam faucibus tempor ante, tincidunt pulvinar tortor tristique ac. Nulla eget justo vitae lacus dictum faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras et mi sed nisl pharetra maximus suscipit at nisl. In bibendum, purus nec venenatis dictum, mauris ligula blandit lorem, ac accumsan diam sem id nunc. Suspendisse congue accumsan neque, ac aliquet ex ornare nec. Morbi luctus et lectus vel molestie.</p>
 
@@ -115,5 +103,27 @@ setInterval(function(){
  <p>Donec in justo est. Nam quis neque a velit ultricies dictum. Curabitur placerat, diam nec vestibulum molestie, augue lorem blandit libero, a sodales mauris nulla eu magna. Nam finibus euismod turpis, at aliquam urna ornare et. Phasellus ultrices odio ut risus rhoncus, ut ultricies turpis pretium. Nulla pretium, neque in egestas rhoncus, magna risus rutrum ipsum, sit amet commodo neque augue eu velit. Nam tristique, dolor eu fringilla vestibulum, libero velit maximus metus, a faucibus neque enim sit amet sem. Aenean hendrerit elit ut neque bibendum, et malesuada lorem commodo. Curabitur posuere, erat sed sagittis aliquet, massa turpis placerat metus, cursus cursus velit odio ut lacus. Curabitur tincidunt, nunc eu euismod volutpat, purus eros eleifend diam, eget pulvinar odio massa a orci. Vestibulum aliquam semper risus, id cursus magna porta vel. Maecenas vel dolor quis sapien venenatis suscipit sit amet eu velit. Quisque porttitor id ex at auctor. Donec id interdum sapien, id viverra urna. Sed fringilla fermentum venenatis. Vestibulum eros orci, pharetra vel elit id, bibendum lacinia tellus.</p>
 
  <p>Vestibulum aliquam ligula at pharetra tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus at lacus non massa malesuada faucibus eget sit amet ex. Aenean eget ex nulla. Suspendisse potenti. Nunc suscipit, velit a commodo iaculis, sem orci congue purus, quis bibendum mauris augue non enim. Praesent fermentum venenatis ante, ut lacinia justo congue nec. Mauris vel sollicitudin odio. Nunc aliquam ex eget nunc aliquam consequat. In ultricies, orci eleifend fringilla ultricies, ipsum ex laoreet urna, sit amet suscipit nulla nisl vel nulla. Aenean quis nunc fringilla, ullamcorper sapien vel, ornare massa. Duis tristique.</p>
+ <script>
+var style = getComputedStyle(document.body);
+var hue = Number(style.getPropertyValue('--hue'));
+var anchor = document.getElementById("bitch");
+var bitch;
+console.log(hue)
+anchor.addEventListener("mouseover", function( event ) {   
+  console.log('test');
+  bitch = setInterval(function(){
+    if (hue < 360) {
+      document.documentElement.style.setProperty('--hue', hue+=1);
+      console.log(hue)
+    } else {
+      hue = 0;
+    }
+  },30);
+});
+anchor.addEventListener("mouseout", function( event ) {   
+  console.log('hey')
+  clearInterval(bitch);
+});
+</script>
 </body>
 </html>
