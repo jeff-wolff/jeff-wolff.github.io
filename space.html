@@ -7,11 +7,12 @@
   <title>Document</title>
   <style>
     :root {
-      --hue: 0;
+      --hue: 1;
     }
     body {
-      background: hsl(var(--hue),95%,6%);
-      color: hsl(var(--hue),55%,70%);
+      transition: background-color 1s ease;
+      background-color: hsl(var(--hue),95%,20%);
+      color: rgba(255,255,255,0.75);
         font-family: 'Roboto Mono';
         font-size: calc(14px + .625vw);
         font-variant-ligatures: none;
@@ -24,8 +25,11 @@
     strong {
       font-weight: 500;
     }
+    h1,h2 {
+      color: rgba(255,255,255,0.95);
+    }
     h1 {
-      font-family: system-ui;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-weight: bold;
       font-size: 2.125em;
       line-height: 1.2;
@@ -33,7 +37,7 @@
       margin: 2em 0 1em;
     }
     h2 {
-      font-family: system-ui;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     .liga {
       font-variant-ligatures: discretionary-ligatures;
@@ -43,7 +47,7 @@
     }
     @media (min-width: 768px){
       h1 {
-        font-size: 2.765957446808511em;
+        font-size: 3em;
       }
     }
     @media (min-width: 1280px){
@@ -51,7 +55,7 @@
         
       }
       h1 {
-        font-size: 3em;
+        font-size: 3.25em;
       }
       p {
         max-width: 75ch;
@@ -59,7 +63,7 @@
     }
     @media (min-width: 1440px) {
       h1 {
-        font-size: 3.25em;
+        font-size: 3.5em;
       }
     }
   </style>
@@ -67,10 +71,24 @@
 <body>
 <script>
 let hue = 0;
-window.addEventListener('scroll', function(e) {
-  console.log(window.scrollY/15, window.scrollY);
-   document.documentElement.style.setProperty('--hue', window.scrollY/15);
-});
+setInterval(function(){
+  document.documentElement.style.setProperty('--hue', Math.floor(Math.random() * 350) + 0);
+},3000);
+// window.addEventListener('scroll', function(e) {
+//   const scrollY = window.scrollY;
+//   document.documentElement.style.setProperty('--hue', 0);
+//    if (scrollY > 1000) {
+//       document.documentElement.style.setProperty('--hue', 25);
+//    } 
+//    if (scrollY > 2000) {
+//       document.documentElement.style.setProperty('--hue', 40);
+//    }
+//    if (scrollY > 3000) {
+//       document.documentElement.style.setProperty('--hue', 80);
+//    }
+//   console.log( scrollY);
+   
+// });
 </script>
 <h2 class="liga">jeff wolff</h2>
   <h1 class="liga">The quick brown fox jumps over the lazy dog</h1>
@@ -87,7 +105,7 @@ window.addEventListener('scroll', function(e) {
  <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas lobortis et est sed aliquam. Nulla quis fermentum enim. Mauris lacinia placerat lacus, vel blandit orci ornare nec. Donec pulvinar porttitor elementum. Aenean ac est ullamcorper, volutpat leo non, tempus neque. Nullam purus erat, aliquet vehicula quam quis, eleifend mollis lectus. Sed id blandit diam, quis bibendum ligula. Morbi aliquam imperdiet nisi, ut vehicula orci ornare vel. Vivamus felis nisl, efficitur venenatis erat quis, tincidunt ullamcorper mi. Praesent rhoncus in tellus eu viverra. Praesent ut mattis est. Morbi ultrices nulla erat, et dapibus nulla finibus eget. Quisque pellentesque, nibh et consequat condimentum, magna nisi varius mi, sit amet pharetra tortor mi eu nibh.</p>
 
  <p>Aliquam sagittis sagittis laoreet. Vivamus ultrices purus ac eleifend fermentum. Pellentesque id molestie sapien. Aliquam tempor ex at lectus aliquet, quis placerat nibh posuere. Nam eu nunc at neque aliquet dapibus consectetur et sem. Proin et rutrum felis. Etiam efficitur tristique arcu, et pulvinar ligula efficitur id. Vivamus sit amet scelerisque mauris. Nunc quam tortor, semper in porttitor quis, porttitor ac sapien. Nunc fringilla est vel nisi aliquam malesuada. Quisque commodo mattis urna, nec vestibulum velit mollis non. Maecenas velit ante, posuere nec mauris vel, facilisis pharetra eros. Vivamus lacinia viverra augue, vel blandit enim tempus ut. Sed euismod odio ac ullamcorper imperdiet. Praesent et tellus a arcu tristique facilisis ut pretium turpis. Etiam non sollicitudin tortor.</p>
-
+  <h2 id="test">hi</h2>
  <p>Donec in justo est. Nam quis neque a velit ultricies dictum. Curabitur placerat, diam nec vestibulum molestie, augue lorem blandit libero, a sodales mauris nulla eu magna. Nam finibus euismod turpis, at aliquam urna ornare et. Phasellus ultrices odio ut risus rhoncus, ut ultricies turpis pretium. Nulla pretium, neque in egestas rhoncus, magna risus rutrum ipsum, sit amet commodo neque augue eu velit. Nam tristique, dolor eu fringilla vestibulum, libero velit maximus metus, a faucibus neque enim sit amet sem. Aenean hendrerit elit ut neque bibendum, et malesuada lorem commodo. Curabitur posuere, erat sed sagittis aliquet, massa turpis placerat metus, cursus cursus velit odio ut lacus. Curabitur tincidunt, nunc eu euismod volutpat, purus eros eleifend diam, eget pulvinar odio massa a orci. Vestibulum aliquam semper risus, id cursus magna porta vel. Maecenas vel dolor quis sapien venenatis suscipit sit amet eu velit. Quisque porttitor id ex at auctor. Donec id interdum sapien, id viverra urna. Sed fringilla fermentum venenatis. Vestibulum eros orci, pharetra vel elit id, bibendum lacinia tellus.</p>
 
  <p>Vestibulum aliquam ligula at pharetra tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus at lacus non massa malesuada faucibus eget sit amet ex. Aenean eget ex nulla. Suspendisse potenti. Nunc suscipit, velit a commodo iaculis, sem orci congue purus, quis bibendum mauris augue non enim. Praesent fermentum venenatis ante, ut lacinia justo congue nec. Mauris vel sollicitudin odio. Nunc aliquam ex eget nunc aliquam consequat. In ultricies, orci eleifend fringilla ultricies, ipsum ex laoreet urna, sit amet suscipit nulla nisl vel nulla. Aenean quis nunc fringilla, ullamcorper sapien vel, ornare massa. Duis tristique.</p>
