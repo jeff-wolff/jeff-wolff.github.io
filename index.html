@@ -7,6 +7,12 @@
 <meta name="author" content="Jeff Wolff">
 <meta name="description" content="Jeff Wolff from San Diego, California makes websites with HTML, CSS, and Javascript.">
 <meta name="theme-color" content="#000000">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@jeffwolff">
+<meta property="og:url" content="http://jeffwolff.net/">
+<meta property="og:title" content="Jeff Wolff's Portfolio">
+<meta property="og:description" content="Front-end website design and development">
+<meta property="og:image" content="img/share.jpg">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" sizes="192x192" href="/favicon.png">
 <style>body,html{font-family:monospace;box-sizing:border-box;font-size:16px;line-height:1.8}*,:after,:before{box-sizing:inherit}body{transition:750ms all;background-color:#000;padding:10px;margin:2.5vw;font-size:14px}@media (min-width:640px){body{padding:20px}}a{color:red}a:hover{color:#8b0000}.logo{text-align:center;font-style:italic}h1{font-size:2.5em}h2{font-size:2em}h1,h2,h3{font-weight:700;line-height:1.25;color:#111;margin:40px auto 1.25rem}@media (min-width:640px){h1{font-size:64px}h2{font-size:28px;margin-top:80px}}h2,h3,mark,ol,p,ul{max-width:600px;margin-left:auto;margin-right:auto}mark,p{color:#444}strong{color:#111}small{font-size:.7142857em}.content{min-height:calc(100vh - 40px);padding:20px;background-color:#fff}@media (min-width:640px){.content{padding:60px}}.footer{display:inline-block;padding-top:1rem;color:#fff}</style>
@@ -18,6 +24,14 @@
 <p>I reside in San Diego, California and for over ten years I have been designing and developing websites for numerous small&ndash;medium sized businesses. My current websites are coded with HTML5, CSS3, &amp; Javascript. <strong>I strive to create websites that are engaging and easy to use.</strong></p>
 <p>I am currently building responsive and high performing websites for premier brands at <a href="http://cukeragency.com" rel="nofollow" target="_blank">Cuker Agency</a> in Solana Beach, CA.</p>
 <p><mark><em><strong>Want to see how this website looked like in the past? I have a <a href="time_machine.html">website time machine</a>.</strong></em></mark></p>
+<!-- Your share button code -->
+<div class="fb-share-button" 
+  data-href="http://jeffwolff.net" 
+  data-layout="button_count">
+</div>
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet">
+Tweet</a>
 <h2>Social networks</h2>
 <p>Find me online</p>
 <ul>
@@ -29,6 +43,16 @@
 </ul>
 </div>
 <small class="footer">&copy; 2017 Jeff Wolff</small>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <script>!function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-486826-17","auto"),ga("send","pageview")</script>
 </body>
 </html>
