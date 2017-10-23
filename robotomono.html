@@ -9,7 +9,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #E0DFDE;
+      background-color: #ece3df;
       color: #0D0500;
       font-family: 'Roboto Mono';
       font-weight: 300;
@@ -95,6 +95,7 @@
       font-size: 15px;
       font-size: 0.9375rem;
       letter-spacing: .15em;
+      text-transform: uppercase;
     }
     @media (max-width: 1280px) {
       .caption {
@@ -115,24 +116,51 @@
       }
     }
     
+ 
+    a {
+      text-decoration-skip: ink;
+
+      color: #ff4d00;
+       /* padding: .12em; */
+    }
+    a:hover {
+      background-color: #ff4d00;
+      text-decoration: none;
+      color: #ece3df;
+      /* border: 1px solid red; */
+      /* box-shadow:  1px 1px .5em rgba(0,0,0,.5); */
+    }
     .darkies {
       padding-top: 120px;
       padding-bottom: 120px;
       background-color: #0D0500;
-      color: #FFF7F2;
+      color: #ece3df;
     }
-    a {
-      background-color: yellow;
-      border: 1px solid red;
-      /* box-shadow:  1px 1px .5em rgba(0,0,0,.5); */
+    .darkies a {
+      /* color: #ece3df; */
+    }
+    ::selection {
+      color: #ece3df;
+      background-color: #ff4d00;
+    }
+    .browser {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   </style>
 </head>
 <body>
 <div class="spacer">
+  <div class="browser">
+    <iframe src="https://www.ripcurl.com/us" frameborder="0" width="375" height="667" style="    transform-origin: 0 0;transform:scale(0.5)"></iframe>
+  </div>
+    <div class="browser" style="left:50%;">
+    <iframe src="https://www.amariactive.com" frameborder="0" width="375" height="667" style="    transform-origin: 0 0;transform:scale(0.5)"></iframe>
+  </div>
   <h1>Display</h1>
-  <h1><a href="#">Additional colors are appropriate for things like charts</a></h1>
-  <h1 class="darkies">Additional colors are appropriate for things like charts</h1>
+  <h1>Additional colors are appropriate for things like charts</h1>
+  <h1 class="darkies"><a href="#">Additional colors are appropriate for things like charts</a></h1>
   <h1 class="display">Additional colors are appropriate for things like charts</h1>
   <h1 class="display darkies">Additional colors are appropriate for things like charts</h1>
   <h1>Headline</h1>
