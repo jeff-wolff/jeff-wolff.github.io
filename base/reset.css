@@ -67,9 +67,6 @@ abbr[title] {
 audio,img,video {
   max-width: 100%;
 }
-iframe {
-  width: 100%;
-}
 /* Forms */
 input,select,textarea {
   max-width: 100%;
