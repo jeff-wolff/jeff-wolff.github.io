@@ -155,8 +155,6 @@ sup {
 
 }
 code {
-  background: var(--white);
-  color: var(--black);
   display: block;
   padding: 2vw;
 }
@@ -230,6 +228,9 @@ input,select,textarea,button,.button {
   padding: var(--global-form-padding);
   background-color: var(--bg-color);
   color: var(--primary);
+}
+input[type="checkbox"],input[type="radio"] {
+  border: none;
 }
 input[type="reset"], button[type="reset"] {
   border: 1px solid var(--secondary);
