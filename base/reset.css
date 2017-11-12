@@ -89,8 +89,9 @@ table:not([class]) {
   overflow-x: auto;
   width: fit-content;
 }
-table:not([class]) td {
+table:not([class]) td, table:not([class]) th {
   white-space:nowrap;
+  padding: .25em .5em;
 }
 td.nums {
   text-align: right;
