@@ -64,8 +64,11 @@ abbr[title] {
   cursor: help;
 }
 /* Embedded content */
-audio,img,video,iframe {
+audio,img,video {
   max-width: 100%;
+}
+iframe {
+  width: 100%;
 }
 /* Forms */
 input,select,textarea {
