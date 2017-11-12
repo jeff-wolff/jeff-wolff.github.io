@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML5 Style Guide</title>
-  <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="reset.css">
 </head>
 <body>
+  <style>
+    section,nav,header {
+      width: 90%;
+      margin: 60px auto;
+    }
+    article > footer {
+      margin-bottom: 60px;
+    }
+  </style>
   <div id="top" role="document">
-    
     <header role="banner">
-      <h2>HTML5 Test Page</h1>
+      <h2>HTML5 Test Page</h2>
       <p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks.</p>
     </header>
     <nav role="navigation">
@@ -58,11 +65,11 @@
     </nav>
     <main role="main">
       <section id="text">
-        <header><h2>Text</h2></header>
+        <h2>Text</h2>
         <article id="text__headings">
-          <header>
+          
             <h2>Headings</h2>
-          </header>
+          
           <section>
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
@@ -74,28 +81,32 @@
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="text__paragraphs">
-          <header><h2>Paragraphs</h2></header>
+          <h2>Paragraphs</h2>
           <section>
             <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
           </section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="text__blockquotes">
-          <header><h2>Blockquotes</h2></header>
+          <h2>Blockquotes</h2>
           <section>
             <blockquote>
               <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
               <p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>
-              <cite><a href="#!">Said no one, ever.</a></cite>
+              <cite>Said no one, ever.</cite>
             </blockquote>
           </section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="text__lists">
-          <header><h2>Lists</h2></header>
+          <h2>Lists</h2>
           <section>
             <h3>Definition list</h3>
             <dl>
+              <dt>Definition List Title</dt>
+              <dd>This is a definition list division.</dd>
+              <dt>Definition List Title</dt>
+              <dd>This is a definition list division.</dd>
               <dt>Definition List Title</dt>
               <dd>This is a definition list division.</dd>
             </dl>
@@ -115,14 +126,14 @@
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="text__hr">
-          <header><h2>Horizontal rules</h2></header>
+          <h2>Horizontal rules</h2>
           <section>
             <hr>
           </section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="text__tables">
-          <header><h2>Tabular data</h2></header>
+          <h2>Tabular data</h2>
           <table>
             <caption>Imperial to metric conversion factors
               <p><i>Values are given to three significant figures unless exact</i></p>
@@ -204,24 +215,17 @@
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="text__code">
-          <header><h2>Code</h2></header>
+          <h2>Code</h2>
           <section>
             <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
             <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
             <h2>Pre-formatted text</h2>
-            <pre>P R E F O R M A T T E D T E X T
-                  ! " # $ % &amp; ' ( ) * + , - . /
-                  0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-                  @ A B C D E F G H I J K L M N O
-                  P Q R S T U V W X Y Z [ \ ] ^ _
-                  ` a b c d e f g h i j k l m n o
-                  p q r s t u v w x y z { | } ~ 
-            </pre>
+            <pre>P R E F O R M A T T E D T E X T</pre>
           </section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="text__inline">
-          <header><h2>Inline elements</h2></header>
+          <h2>Inline elements</h2>
           <section>
             <p><a href="#!">This is a text link</a>.</p>
             <p><strong>Strong is used to indicate strong importance.</strong></p>
@@ -244,9 +248,9 @@
       </section>
 
       <section id="embedded">
-        <header><h2>Embedded content</h2></header>
+        <h2>Embedded content</h2>
         <article id="embedded__images">
-          <header><h2>Images</h2></header>
+          <h2>Images</h2>
           <section>
             <h3>No &lt;figure&gt; element</h3>
             <p><img src="http://placehold.it/480x480" alt="Image alt text"></p>
@@ -261,43 +265,43 @@
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__audio">
-          <header><h2>Audio</h2></header>
+          <h2>Audio</h2>
           <section><audio controls="">audio</audio></section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__video">
-          <header><h2>Video</h2></header>
+          <h2>Video</h2>
           <section><video controls="">video</video></section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__canvas">
-          <header><h2>Canvas</h2></header>
+          <h2>Canvas</h2>
           <section><canvas>canvas</canvas></section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__meter">
-          <header><h2>Meter</h2></header>
+          <h2>Meter</h2>
           <section><meter value="2" min="0" max="10">2 out of 10</meter></section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__progress">
-          <header><h2>Progress</h2></header>
+          <h2>Progress</h2>
           <section><progress>progress</progress></section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__svg">
-          <header><h2>Inline SVG</h2></header>
+          <h2>Inline SVG</h2>
           <section><svg width="100px" height="100px"><circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle></svg></section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__iframe">
-          <header><h2>IFrame</h2></header>
+          <h2>IFrame</h2>
           <section><iframe src="index.html" height="300"></iframe></section>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
       </section>
       <section id="forms">
-        <header><h2>Form elements</h2></header>
+        <h2>Form elements</h2>
         <form>
           <div id="forms__input">
             <legend>Input fields</legend>
@@ -384,7 +388,7 @@
             <fieldset>
               <p>
                 <label for="textarea">Textarea</label>
-                <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+                <textarea id="textarea" placeholder="Enter your message here"></textarea>
               </p>
             </fieldset>
           </div>
@@ -445,6 +449,6 @@
       </section>
     </main>
   </div>
-  <script src="css-var-polyfill.js"></script>
+
 </body>
 </html>
