@@ -40,7 +40,7 @@ p#switch { cursor: pointer; }
 
 #caption span { width: auto; position: absolute; bottom: 10px; font-size: .85em; color: #666666; }
 
-#subhead { background: url(spec-border.gif) repeat-x bottom; width: 940px; height: 250px; margin: 0 40px 0 40px; }
+#subhead {/*  background: url(spec-border.gif) repeat-x bottom; */ width: 940px; height: 250px; margin: 0 40px 0 40px; }
 
 #nav  { width: 140px; float: left; margin: 19px 10px 0 0; }
 
